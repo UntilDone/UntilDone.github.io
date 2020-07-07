@@ -17,6 +17,10 @@
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
+  margin-left: 50px;
+  font-family: 'Fondamento', cursive;
+  text-shadow: 1px 1px 10px $link-base-color;
+  &:hover {text-decoration: wavy;}
 
   @include media-query($on-palm) {
     padding-right: 45px;
@@ -26,6 +30,7 @@
   &:visited {
     color: $site-title-color;
   }
+
 }
 
 .site-nav {
@@ -36,6 +41,8 @@
   border: 1px solid $border-color-01;
   border-radius: 5px;
   text-align: right;
+  
+
 
   .nav-trigger {
     display: none;
@@ -241,7 +248,7 @@
   img {
     border: 2px solid;
     border-radius: 50%;
-    border-color: $link-base-color;
+    border-color: $text-color;
     box-shadow: 1px 1px 2px 2px #555;
   }
 }
@@ -272,7 +279,6 @@
   text-align: justify;
   background-color: $content-color;
   border-radius: 10px;
-
   h1, h2, h3 { margin-top: $spacing-unit * 2 }
   h4, h5, h6 { margin-top: $spacing-unit }
 
