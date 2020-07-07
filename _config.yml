@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Grimório
+title: Grimório Script
 lang: pt-br
 email: rompcosta@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
@@ -39,6 +39,7 @@ plugins:
   - jekyll-feed
   - jekyll-remote-theme
   - jekyll-sitemap
+  - jemoji
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
