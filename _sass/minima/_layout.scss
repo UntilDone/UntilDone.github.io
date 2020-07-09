@@ -5,7 +5,7 @@
   border-bottom: 1px solid $border-color-01;
   min-height: $spacing-unit * 1.865;
   line-height: $base-line-height * $base-font-size * 2.25;
-  background-color: $header-footer-color;
+  background-color: $header-color;
 
   // Positioning context for the mobile navigation icon
   position: relative;
@@ -20,7 +20,6 @@
   margin-left: 50px;
   font-family: 'Fondamento', cursive;
   text-shadow: 1px 1px 10px $link-base-color;
-  &:hover {text-decoration: wavy;}
 
   @include media-query($on-palm) {
     padding-right: 45px;
@@ -131,7 +130,7 @@
 .site-footer {
   border-top: 1px solid $border-color-01;
   padding: $spacing-unit 0;
-  background-color: $header-footer-color;
+  background-color: $footer-color;
 }
 
 .footer-heading {
@@ -243,7 +242,7 @@
 .author {
   display: grid;
   grid-template-columns: auto auto;
-  background-color: $header-footer-color;
+  background-color: $header-color;
   border-radius: 50px 40%;
   img {
     border: 2px solid;
@@ -305,9 +304,21 @@
   h5 {
     @include relative-font-size(1.125);
   }
+
   h6 {
     @include relative-font-size(1.0625);
   }
+
+  .quote-box {
+    box-shadow: 3px 3px 3px $background-color;
+    width: 90%;
+    background-image: linear-gradient(to bottom, #4e005e 0%, #430050 100%); 
+    border-radius: 5px 0px 0px 5px;
+    margin: 20px 20px 20px 28px;
+    padding: 2.5% 5% 3% 5%;
+    width: 50;
+  }
+
 }
 
 .post-description {
@@ -328,7 +339,6 @@
     a {
       display: block;
       padding: $spacing-unit / 4;
-      &:hover { border-color: $border-color-02 }
     }
   }
 }

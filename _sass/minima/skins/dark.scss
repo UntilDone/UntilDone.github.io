@@ -6,15 +6,17 @@ $brand-color-dark:      darken($brand-color, 35%) !default;
 
 $site-title-color:      $brand-color-light !default;
 
-$text-color:            #dddddd !default;
-$header-footer-color:   #1f1e1e !default;
 $background-color:      #252525 !default;
-$content-color:         #363636 !default;
-$code-background-color: #212121 !default;
+$code-background-color: darken($background-color, 3%) !default;
+$content-color:         lighten($background-color, 8%) !default;
+
+$footer-color:          #1f1e1e !default;
+$header-color:          $footer-color !default;
+$text-color:            #eeeeee !default;
 
 $link-base-color:       #239e04 !default;
 $link-visited-color:    $link-base-color !default;
-$link-hover-color:      $text-color !default;
+$link-hover-color:      darken($link-base-color, 5%) !default;
 
 $border-color-01:       $brand-color-dark !default;
 $border-color-02:       $brand-color-light !default;
@@ -26,6 +28,7 @@ $table-header-bg-color: lighten($background-color, 10%) !default;
 $table-header-border:   lighten($background-color, 21%) !default;
 $table-border-color:    $border-color-01 !default;
 
+// Custom aditional colors
 
 // Syntax highlighting styles should be adjusted appropriately for every "skin"
 // List of tokens: https://github.com/rouge-ruby/rouge/wiki/List-of-tokens

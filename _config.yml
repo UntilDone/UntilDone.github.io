@@ -31,15 +31,23 @@ github_username:  grimorio-script
 
 # Build settings
 remote_theme: grimorio-script/minima
+
+# Skin 
 minima:
   skin: dark
   social_links:
     github: grimorio-script
+
+# Plugins
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
   - jekyll-sitemap
   - jemoji
+
+# Pagination
+
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
