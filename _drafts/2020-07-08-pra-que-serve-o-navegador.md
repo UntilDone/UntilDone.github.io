@@ -12,12 +12,10 @@ Graças à comunidade World Wide Web Consortium ([W3C]) os navegadores vem ao lo
 Quando uma pessoa decide construir um site, é necessário que ela se comunique com o navegador através da linguagem de marcação em hipertexto (HTML). O navegador por sua vez interpreta essas orientações através de um roteiro elaborado pelo desenvolvedor, que finalmente mostra o conteúdo para o visitante. 
 
 <div class="quote-box">
-    <div class="quote">
-        <q>
-        HyperText Markup Language (HTML) é a linguagem usada para descrever e definir o conteúdo de uma página Web em um formato estruturado.
-        </q> --
-    <a href="[mozilla]"> Fundação Mozilla</a>
-    </div>
+    <q>
+    HyperText Markup Language (HTML) é a linguagem usada para descrever e definir o conteúdo de uma página Web em um formato estruturado.
+    </q>
+    <p>-- <a href="[mozilla]"> Fundação Mozilla</a></p>
 </div> 
 
 Quando acessamos um site na internet através de um endereço eletrônico, informamos ao navegador onde ele precisa baixar os arquivos que serão interpretados, e assim prosseguir com visualização do conteúdo.

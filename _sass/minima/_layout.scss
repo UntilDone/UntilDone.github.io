@@ -250,12 +250,16 @@
   display: grid;
   grid-template-columns: auto auto;
   background-color: $header-color;
-  border-radius: 50px 40%;
+  border-radius: 100px 200px;
+
   img {
     border: 2px solid;
     border-radius: 50%;
     border-color: $text-color;
     box-shadow: 1px 1px 2px 2px #555;
+    position: relative;
+    right: 20px;
+    bottom: 10px;
   }
 }
 
@@ -326,6 +330,11 @@
     margin: 20px 20px 20px 35px;
     padding: 2.5% 5% 3% 5%;
     box-shadow: 1px 1px 3px 0px $background-color;
+    font-style: italic;
+    p {
+      text-align: right;
+      font-size: medium;
+    } 
   }
 
 }
@@ -407,7 +416,15 @@
 	transform: translate(-50%, -50%);
 	margin: 0;
 	color: #fff;
-	letter-spacing: -1px;
+  letter-spacing: -1px;
+  
+  @include media-query($on-palm) {
+    left: $spacing-unit * 8;
+   }
+
+  @include media-query($on-laptop) {
+    left: $spacing-unit * 8;
+  }
 	
 	&:before, &:after {
 		display: block;
@@ -421,7 +438,7 @@
 		opacity: .8;
 	} &:after {
 		color: #f0f;
-		z-index: -2;
+    z-index: -2;
 	} &:before {
 		color: #0ff;
     z-index: -1;
@@ -435,13 +452,6 @@
 		}
 	}
 }
-
-@media only screen and (max-width: 400px) {
-	.glitch {
-		font-size: 3em;
-	}
-}
-
 
 @keyframes glitch {
 	0% {
