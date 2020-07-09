@@ -6,13 +6,16 @@ $brand-color-dark:      darken($brand-color, 35%) !default;
 
 $site-title-color:      $brand-color-light !default;
 
-$background-color:      #252525 !default;
+$background-color:      #303030 !default;
 $code-background-color: darken($background-color, 3%) !default;
 $content-color:         lighten($background-color, 8%) !default;
 
-$footer-color:          #1f1e1e !default;
+$footer-color:          #252525 !default;
 $header-color:          $footer-color !default;
-$text-color:            #eeeeee !default;
+$text-color:            #dad8d8 !default;
+
+$label-color:           #4e005e !default;
+$label-color-dark:      darken($label-color, 2%) !default;
 
 $link-base-color:       #239e04 !default;
 $link-visited-color:    $link-base-color !default;
@@ -98,4 +101,3 @@ $table-border-color:    $border-color-01 !default;
   .vi    { color: #EEFFFF } // Name.Variable.Instance
   .il    { color: #F78C6C } // Literal.Number.Integer.Long
 }
-

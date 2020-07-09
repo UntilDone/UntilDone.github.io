@@ -1,7 +1,7 @@
 /**
  * Site header
  */
-.site-header {
+ .site-header {
   border-bottom: 1px solid $border-color-01;
   min-height: $spacing-unit * 1.865;
   line-height: $base-line-height * $base-font-size * 2.25;
@@ -9,6 +9,7 @@
 
   // Positioning context for the mobile navigation icon
   position: relative;
+
 }
 
 .site-title {
@@ -19,17 +20,11 @@
   float: left;
   margin-left: 50px;
   font-family: 'Fondamento', cursive;
-  text-shadow: 1px 1px 10px $link-base-color;
+  color: $site-title-color;
 
   @include media-query($on-palm) {
     padding-right: 45px;
   }
-
-  &,
-  &:visited {
-    color: $site-title-color;
-  }
-
 }
 
 .site-nav {
@@ -230,13 +225,25 @@
 }
 
 .post-meta {
-  font-size: $small-font-size;
   color: $brand-color;
 }
 
 .post-link {
   display: block;
   @include relative-font-size(1.5);
+}
+
+.post-date {
+  background-image: linear-gradient(to bottom, $link-base-color 0%, darken($link-base-color, 20%) 100%); 
+  color: $brand-color;
+  width: 17.5%;
+  margin-left: -35px;
+  margin-bottom: 20px;
+  padding: 5px 15px 5px 0px;
+  text-align: right;
+  font-weight: 400;
+  border-radius: 0px 5px 5px 0px;
+  box-shadow: 0px 0px 3px 1px $content-color;
 }
 
 .author {
@@ -261,24 +268,26 @@
 
 .post-title,
 .post-content h1 {
-  @include relative-font-size(2.625);
+  @include relative-font-size(2.225);
   letter-spacing: -1px;
   line-height: 1.15;
   text-align: center;
 
   @media screen and (min-width: $on-large) {
-    @include relative-font-size(2.625);
+    @include relative-font-size(2.225);
   }
 }
 
 .post-content {
   margin-bottom: $spacing-unit;
   margin-top: $spacing-unit;
-  padding: 20px;
+  padding: 30px;
   text-align: justify;
   background-color: $content-color;
   border-radius: 10px;
-  h1, h2, h3 { margin-top: $spacing-unit * 2 }
+  box-shadow: 0px 0px 6px 1px $background-color;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  h1, h2, h3 { margin-top: $spacing-unit }
   h4, h5, h6 { margin-top: $spacing-unit }
 
   h2 {
@@ -312,11 +321,11 @@
   .quote-box {
     box-shadow: 3px 3px 3px $background-color;
     width: 90%;
-    background-image: linear-gradient(to bottom, #4e005e 0%, #430050 100%); 
+    background-image: linear-gradient(to bottom, $label-color 0%, darken($label-color, 10%) 100%); 
     border-radius: 5px 0px 0px 5px;
-    margin: 20px 20px 20px 28px;
+    margin: 20px 20px 20px 35px;
     padding: 2.5% 5% 3% 5%;
-    width: 50;
+    box-shadow: 1px 1px 3px 0px $background-color;
   }
 
 }
@@ -380,4 +389,3 @@
     width: calc(50% - (#{$spacing-unit} / 2));
   }
 }
-

@@ -115,13 +115,10 @@ a {
   color: $link-base-color;
   text-decoration: none;
 
-  &:visited {
-    color: $link-visited-color;
-  }
-
   &:hover {
     color: $link-hover-color;
-    text-decoration: underline;
+    opacity: 1;
+    transition: 0.4s;
   }
 
   .social-media-list &:hover {
@@ -132,6 +129,7 @@ a {
     }
   }
 }
+
 
 
 /**
@@ -279,5 +277,18 @@ table {
     -webkit-overflow-scrolling: touch;
             -ms-overflow-style: -ms-autohiding-scrollbar;
   }
+}
+
+/**
+ * Site Title
+ */
+
+.site-title::before {
+    content: "< ";
+    color: green;
+  }
+.site-title::after {
+  content:" />";
+  color: green;
 }
 
