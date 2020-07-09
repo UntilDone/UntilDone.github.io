@@ -17,10 +17,10 @@
   font-weight: 300;
   letter-spacing: -1px;
   margin-bottom: 0;
-  float: left;
   margin-left: 50px;
   font-family: 'Fondamento', cursive;
   color: $site-title-color;
+  position: absolute;
 
   @include media-query($on-palm) {
     padding-right: 45px;
@@ -388,4 +388,78 @@
   .one-half {
     width: calc(50% - (#{$spacing-unit} / 2));
   }
+}
+
+/**
+ * Glitch title
+ */
+.glitch {
+	font: {
+		size: 1.125em;
+    font-family: 'Fondamento', cursive;
+		weight: 300;
+	}
+	text-decoration: none;
+	text-transform: uppercase;
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	transform: translate(-50%, -50%);
+	margin: 0;
+	color: #fff;
+	letter-spacing: -1px;
+	
+	&:before, &:after {
+		display: block;
+		content: attr(data-glitch);
+		text-transform: uppercase;
+		position: inherit;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		opacity: .8;
+	} &:after {
+		color: #f0f;
+		z-index: -2;
+	} &:before {
+		color: #0ff;
+    z-index: -1;
+	}
+	&:hover {
+		&:before {
+			animation: glitch .3s cubic-bezier(.25, .46, .45, .94) both 5
+		}
+		&:after {
+			animation: glitch .3s cubic-bezier(.25, .46, .45, .94) reverse both 5
+		}
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.glitch {
+		font-size: 3em;
+	}
+}
+
+
+@keyframes glitch {
+	0% {
+		transform: translate(0)
+	}
+	20% {
+		transform: translate(-2px, 2px)
+	}
+	40% {
+		transform: translate(-2px, -2px)
+	}
+	60% {
+		transform: translate(2px, 2px)
+	}
+	80% {
+		transform: translate(2px, -2px)
+	}
+	to {
+		transform: translate(0)
+	}
 }

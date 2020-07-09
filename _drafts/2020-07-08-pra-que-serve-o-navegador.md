@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Do que os navegadores de rede são capazes?"
+title:  "Pra que serve o navegador?"
 date:   2020-07-08
-categories: navegadores navegador 
+categories: navegador navegadores html
 published: true
 ---
 
@@ -10,7 +10,7 @@ published: true
 Graças à comunidade World Wide Web Consortium ([W3C]) os navegadores vem ao longo do tempo se adaptando para garantir uma padronização na linguagem responsável por exibir o conteúdo dos sites visitados. Desta forma os desenvolvedores precisam cada vez menos escrever orientações específicas para cada sistema.
 
 Quando uma pessoa decide construir um site, é necessário que ela se comunique com o navegador através da linguagem de marcação em hipertexto (HTML). O navegador por sua vez interpreta essas orientações através de um roteiro elaborado pelo desenvolvedor, que finalmente mostra o conteúdo para o visitante. 
-Hipertexto é uma forma especial de informação capaz de agregar referências para textos, imagens, sons, e toda sorte de códigos.
+
 <div class="quote-box">
     <div class="quote">
         <q>
