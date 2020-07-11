@@ -1,7 +1,7 @@
 ---
 layout: sobre
-title: Sobre
-permalink: /sobre/
+title: Help
+permalink: /about/
 ---
 
 &emsp;Este blog foi reservado para organizar as pesquisas sobre tecnologia da informação que venho realizando desde 2017. Comecei a estudar o assunto neste mesmo ano quando conheci o [GNU/Linux](https://www.gnu.org/). Fiquei encantado com a praticidade que este sistema operacional oferece, e logo senti a necessidade de escolher uma linguagem de programação pra me auxiliar.

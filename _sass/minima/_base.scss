@@ -197,14 +197,14 @@ pre {
  */
 .wrapper {
   max-width: calc(#{$content-width} - (#{$spacing-unit}));
-  margin-right: auto;
-  margin-left: auto;
+  margin-right: 0px;
+  margin-left: 150px;
   padding-right: $spacing-unit / 2;
   padding-left: $spacing-unit / 2;
   @extend %clearfix;
 
   @media screen and (min-width: $on-large) {
-    max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width: calc(#{$content-width} - #{$spacing-unit});
     padding-right: $spacing-unit;
     padding-left: $spacing-unit;
   }
@@ -278,17 +278,3 @@ table {
             -ms-overflow-style: -ms-autohiding-scrollbar;
   }
 }
-
-/**
- * Site Title
- */
-
-.site-title::before {
-    content: "< ";
-    color: green;
-  }
-.site-title::after {
-  content:" />";
-  color: green;
-}
-

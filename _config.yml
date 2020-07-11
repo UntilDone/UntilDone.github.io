@@ -18,16 +18,17 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Grimório Script
-lang: pt-br
+title: until done
+title_sufix: blog
+lang: en-us
 email: rompcosta@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Blog sobre GNU/Linux, e toda sorte de scripts. 
+  done
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: /:title/
 
-github_username:  grimorio-script
+github_username:  UntilDone
 
 # Build settings
 remote_theme: grimorio-script/minima
@@ -36,7 +37,7 @@ remote_theme: grimorio-script/minima
 minima:
   skin: dark
   social_links:
-    github: grimorio-script
+    github: UntilDone
 
 # Plugins
 plugins:

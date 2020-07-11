@@ -1,6 +1,7 @@
 <header class="site-header">
-    <a class="site-title glitch" rel="author" href="{{ "/" | relative_url }}" data-glitch="< {{ site.title }} />">&lt; {{ site.title | escape }} /&gt;</a>
   <div class="wrapper">
+    <bdi class="site-title">{{ site.title | escape }} <a rel="author" href="{{ "/" | relative_url }}">{{ site.title_sufix }}</a></bdi>
+
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
     {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}

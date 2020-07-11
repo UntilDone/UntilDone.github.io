@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Pra que serve o navegador?"
+title:  Navegadores 
 date:   2020-07-08
 categories: navegador navegadores html
 published: true
@@ -15,14 +15,16 @@ Quando uma pessoa decide construir um site, é necessário que ela se comunique 
     <q>
     HyperText Markup Language (HTML) é a linguagem usada para descrever e definir o conteúdo de uma página Web em um formato estruturado.
     </q>
-    <p>-- <a href="[mozilla]"> Fundação Mozilla</a></p>
+    <p class="quote-author">-- <a href="[mozilla]"> Fundação Mozilla</a></p>
 </div> 
 
 Quando acessamos um site na internet através de um endereço eletrônico, informamos ao navegador onde ele precisa baixar os arquivos que serão interpretados, e assim prosseguir com visualização do conteúdo.
 
 (gif acessando a wikipedia)
 
-*Navegadores são sistemas utilizados para acessar a rede e suportam controle sobre vídeos, audios, imagens, e cógidos.*
+<div class="quote-box">
+    <p>Navegadores são sistemas utilizados para acessar a rede e suportam controle sobre vídeos, audios, imagens, e cógidos.</p>
+</div> 
 
 A tecnologia proporcionada pelos navegadores transformou a forma de se comunicar. Ao abrirmos um livro, conseguimos obter informações apenas em forma de texto e imagens. Com a ajuda de um navegador é possível absorver o conhecimento com a interação do leitor, convergindo teoria e pratica na mesma experiência. 
 
