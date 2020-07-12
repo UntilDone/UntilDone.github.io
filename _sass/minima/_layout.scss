@@ -210,7 +210,8 @@
     color: $link-base-color;
   }
 
-  h1 {  
+  h1 {
+    font-weight: bold;  
     @media screen and (min-width: $on-large) {
       @include relative-font-size(3.5);
     }
