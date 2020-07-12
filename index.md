@@ -9,7 +9,7 @@ layout: home
 <br>
 <br>
 
-<h1 style="font-weight: bold; font-size: 70px;">Hi, I'm Rômulo.</h1>
+<h1>Hi, I'm Rômulo.</h1>
 
 <div style="max-width: 800px; font-size: 20px">
 I'm a <span class="emphasis">sysadmin </span>. You may find some of my work on <a href="[github]">GitHub</a>. Feel free to contact me If you're looking for <a href="[Help]">Help</a>.<span class="cursor">&nbsp;&nbsp;</span>
