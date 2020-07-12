@@ -62,19 +62,20 @@
   }
 
   .page-link {
+    border-bottom: 2px solid $text-color;
+    display: inline;
     color: $text-color;
     line-height: $base-line-height;
     letter-spacing: 1px;
-    text-decoration-color: $text-color;
-    text-decoration: underline 2px;
-    display: inline;
-    
+    text-decoration: none;
+
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
       margin-right: 0;
     }
     margin-left: 20px;
   }
+
 
   @media screen and (min-width: $on-medium) {
     border: none;
