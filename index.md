@@ -3,25 +3,25 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title: ""
 ---
 
 <br>
 <br>
 <br>
 
-<h1 style="font-weight: bold; font-size: 60px;">Hi, I'm Rômulo.</h1>
+<h1 style="font-weight: bold; font-size: 70px;">Hi, I'm Rômulo.</h1>
 
+<div style="max-width: 800px; font-size: 20px">
+I'm a <span class="emphasis">sysadmin </span>. You may find some of my work on <a href="[github]">GitHub</a>. Feel free to contact me If you're looking for <a href="[Help]">Help</a>.<span class="cursor">&nbsp;&nbsp;</span>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-I'm into system administration. You may find some of my work on [GitHub](https://github.com/UntilDone). Feel free to contact me If you're looking for [Help](UntilDone.github.io/help).
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
+[github]: https://github.com/UntilDone
+[Help]: #help
