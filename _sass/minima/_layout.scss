@@ -67,6 +67,7 @@
     color: $text-color;
     line-height: $base-line-height;
     letter-spacing: 1px;
+    /* to overide link-base-color */
     text-decoration: none;
 
     // Gaps between nav items, but not on the last one
@@ -74,6 +75,7 @@
       margin-right: 0;
     }
     margin-left: 20px;
+
   }
 
 
@@ -214,11 +216,15 @@
   }
 
   /* blinking cursor */
-  .cursor {
-  animation-name: blink;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
+  .cursor-blink {
+  animation: blink 1s infinite;
   width: 10px;
+
+  /* moving cursor */
+  .cursor-write {
+    animation: write 1s 1;
+
+  }
 }
 
 }
@@ -430,3 +436,13 @@
   100% {background-color: $background-color;}
 }
   
+
+@keyframes write {
+  from {color: $background-color;
+        top: 0px;
+  }
+  to {color: $text-color;
+      top: 200px;
+  
+  }
+}

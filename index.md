@@ -4,15 +4,18 @@
 
 layout: home
 ---
-
+{% assign loop = site.data.author.qualities %}
 <br>
 <br>
 <br>
 
-<h1>Hi, I'm Rômulo.</h1>
-
-<div style="max-width: 800px; font-size: 20px">
-I'm a <span class="emphasis">sysadmin </span>. You may find some of my work on <a href="[github]">GitHub</a>. Feel free to contact me If you're looking for <a href="[Help]">Help</a>.<span class="cursor">&nbsp;&nbsp;</span>
+<div style="max-width: 700px; font-size: 20px; text-align: justify;">
+    <h1>Hi, I'm Rômulo.</h1>
+    <p>I'm a 
+    <span class="cursor-write emphasis">
+    {{ loop[4] }}
+    </span>
+    . You may find some of my work on <a href="[github]">GitHub</a>. Feel free to contact me If you're looking for <a href="[Help]">Help</a>.<span class="cursor-blink">&nbsp;&nbsp;</span></p>
 </div>
 <br>
 <br>
