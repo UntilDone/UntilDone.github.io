@@ -31,9 +31,8 @@
 
 .site-nav {
   background-color: inherit;
-  font-size: large;
   position: relative;
-  top: 36px;
+  top: 38px;
   
   .nav-trigger {
     display: none;
@@ -64,8 +63,9 @@
 
   .page-link {
     border-bottom: 2px solid $text-color;
-    display: inline;
     color: $text-color;
+    display: inline;
+    font-size: medium;
     line-height: $base-line-height;
     letter-spacing: 1px;
     /* to overide link-base-color */
@@ -99,7 +99,7 @@
 
     .page-link {
       display: inline;
-      padding: 0;
+      font-size: large;
 
       &:not(:last-child) {
         margin-right: 20px;
