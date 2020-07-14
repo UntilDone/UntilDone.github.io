@@ -18,14 +18,13 @@
   float: right;
   font-size: 25px;
   bottom: 18px;
+  
   a {
     color: $site-title-color;
   }
 
   @include media-query($on-palm) {
-    padding-right: 45px;
     position: relative;
-    text-align: center;
   }
 
 }
@@ -35,7 +34,7 @@
   font-size: large;
   position: relative;
   top: 36px;
-
+  
   .nav-trigger {
     display: none;
   }
@@ -54,6 +53,7 @@
 
   input ~ .trigger {
     display: block;
+    position: absolute;
 
   }
 

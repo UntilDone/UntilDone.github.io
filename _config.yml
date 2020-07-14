@@ -31,8 +31,10 @@ permalink: /:title/
 github_username:  UntilDone
 
 header_pages:
-  - file.html
-  - about.html
+  - home.html
+  - articles.html
+  - projects.html
+  - help.html
 
 # Build settings
 remote_theme: grimorio-script/minima
