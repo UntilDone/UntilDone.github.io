@@ -49,11 +49,12 @@
   }
 
   label[for="nav-trigger"] {
-    display: none;
+    display: block;
   }
 
   input ~ .trigger {
     display: block;
+
   }
 
   input:checked ~ .trigger {
@@ -75,9 +76,8 @@
       margin-right: 0;
     }
     margin-left: 20px;
-
+    
   }
-
 
   @media screen and (min-width: $on-medium) {
     border: none;
@@ -86,7 +86,7 @@
     position: relative;
 
     label[for="nav-trigger"] {
-      display: none;
+      display: block;
     }
 
     .menu-icon {
