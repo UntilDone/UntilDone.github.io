@@ -30,6 +30,8 @@ permalink: /:title/
 
 github_username:  UntilDone
 
+show_excerpts: true
+
 header_pages:
   - home.html
   - articles.html
