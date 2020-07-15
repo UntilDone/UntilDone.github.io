@@ -28,7 +28,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: /:title/
 
-github_username:  UntilDone
+github_username: PinheiroCosta
 
 show_excerpts: true
 
@@ -45,7 +45,7 @@ remote_theme: grimorio-script/minima
 minima:
   skin: dark
   social_links:
-    github: UntilDone
+  github: PinheiroCosta
 
 # Plugins
 plugins:
