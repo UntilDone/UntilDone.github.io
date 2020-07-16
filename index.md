@@ -4,27 +4,21 @@
 
 layout: home
 ---
-{% assign loop = site.data.author.qualities %}
-<br>
-<br>
-<br>
 
-<div style="max-width: 700px; font-size: 20px; text-align: justify;">
-    <h1>Hi, I'm Rômulo.</h1>
-    <p>I'm a 
-    <span class="cursor-write emphasis">
-    {{ loop[4] }}
-    </span>
-    . You may find some of my work on <a href="[github]">GitHub</a>. Feel free to contact me If you're looking for <a href="[Help]">Help</a>.<span class="cursor-blink">&nbsp;&nbsp;</span></p>
+{%- assign loop = site.data.author.qualities -%}
+
+<div class="intro">
+    <div class="intro-content">
+        <h1>Hi, I'm Rômulo.</h1>
+        <p>
+        I'm a 
+        <span class="cursor-write emphasis">
+        {{ loop[-1] }}
+        </span>
+        . You may find some of my work on <a href="[github]">GitHub</a>. Feel free to contact me If you're looking for <a href="[Help]">Help</a>.<span class="cursor-blink">&nbsp;&nbsp;</span>
+        </p>
+    </div>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
-[github]: https://github.com/UntilDone
+[github]: https://github.com/PinheiroCosta
 [Help]: #help
