@@ -1,0 +1,27 @@
+---
+# Blog Index
+# added tags to load the css specific index.html classes
+
+layout: home
+
+github: https://github.com/PinheiroCosta
+heading: "Hi, I'm Rômulo."
+sufix: "I'm a "
+intro: "You may find some of my work on"
+invite: "Feel free to contact me if you're looking for "
+---
+
+{%- assign loop = site.data.author.qualities -%}
+
+<div class="intro">
+    <div class="intro-content">
+        <h1>{{ page.heading }}</h1>
+        <p>
+            {{ page.sufix }}<span class="cursor-write emphasis">{{ loop[-1] }}</span>.
+            {{ page.intro }} <a href="{{ page.github }}" target="#_blank">GitHub</a>. 
+            {{ page.invite }} <a href="{{ baseurl }}/help/">help</a>.
+            <span class="cursor-blink">&nbsp;&nbsp;</span>
+        </p>
+    </div>
+</div>
+
