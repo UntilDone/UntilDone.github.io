@@ -223,6 +223,7 @@
 
   @include media-query($on-palm) {
     position: relative;
+    @include relative-font-size(0.9);
   }
 
   /* blinking cursor */
