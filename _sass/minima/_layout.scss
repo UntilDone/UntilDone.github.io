@@ -66,7 +66,7 @@
     border-bottom: 2px solid $text-color;
     color: $text-color;
     display: inline;
-    font-size: medium;
+    font-size: large;
     line-height: $base-line-height;
     letter-spacing: 1px;
     /* to overide link-base-color */
@@ -110,8 +110,6 @@
   }
   
 }
-
-
 
 /**
  * Site footer
@@ -206,7 +204,7 @@
   }
   
   .intro {
-    margin-top: 140px;
+    margin-top: 190px;
     margin-bottom: 210px;
 
     .intro-content {

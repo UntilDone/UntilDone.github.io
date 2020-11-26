@@ -11,13 +11,13 @@ intro: "You may find some of my work on"
 invite: "Feel free to contact me if you're looking for "
 ---
 
-{%- assign loop = site.data.author.qualities -%}
+{%- assign quality = site.data.author.qualities -%}
 
 <div class="intro">
     <div class="intro-content">
         <h1>{{ page.heading }}</h1>
         <p>
-            {{ page.sufix }}<span class="cursor-write emphasis">{{ loop[-1] }}</span>.
+				{{ page.sufix }}<span class="cursor-write emphasis"> {{ quality[-1] }}</span>.
             {{ page.intro }} <a href="{{ page.github }}" target="#_blank">GitHub</a>. 
             {{ page.invite }} <a href="{{ baseurl }}/help/">help</a>.
             <span class="cursor-blink">&nbsp;&nbsp;</span>
