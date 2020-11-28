@@ -47,7 +47,8 @@ remote_theme: grimorio-script/minima
 minima:
   skin: dark
   social_links:
-  github: PinheiroCosta
+    instagram: Rom.costa
+    github: PinheiroCosta
 
 # Plugins
 plugins:

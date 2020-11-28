@@ -130,13 +130,13 @@
 .contact-list,
 .social-media-list {
   list-style: none;
-  margin-left: 0;
 }
 
 .footer-col-wrapper,
 .social-links {
   @include relative-font-size(0.9375);
   color: $brand-color;
+  
 }
 
 .footer-col {
