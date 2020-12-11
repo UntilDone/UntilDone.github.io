@@ -262,7 +262,7 @@
 }
 
 .post-date {
-  background-image: linear-gradient(to bottom, link-base-color 0%, darken($link-base-color, 20%) 100%); 
+  background-image: linear-gradient(to bottom, $link-base-color 0%, darken($link-base-color, 20%) 100%); 
   color: $brand-color;
   width: 17.5%;
   margin-left: -35px;
