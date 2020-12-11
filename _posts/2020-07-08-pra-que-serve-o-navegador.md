@@ -1,18 +1,18 @@
 ---
 layout: post
-title:  Navegadores 
-date:   2020-07-08
+title: Navegadores 
+date: 2020-07-08
 categories: tools
 published: true
 ---
 
 
-Graças à comunidade World Wide Web Consortium ([W3C]) os navegadores vem ao longo do tempo se adaptando para garantir uma padronização na linguagem responsável por exibir o conteúdo dos sites visitados. Desta forma os desenvolvedores precisam cada vez menos escrever orientações específicas para cada sistema.
+Graças à comunidade ([W3C]) os navegadores vem ao longo do tempo se adaptando para garantir uma padronização na linguagem responsável por exibir o conteúdo dos sites visitados. Desta forma os desenvolvedores precisam cada vez menos escrever orientações específicas para cada sistema.
 
 Quando uma pessoa decide construir um site, é necessário que ela se comunique com o navegador através da linguagem de marcação em hipertexto (HTML). O navegador por sua vez interpreta essas orientações através de um roteiro elaborado pelo desenvolvedor, que finalmente mostra o conteúdo para o visitante. 
 
 >HyperText Markup Language (HTML) é a linguagem usada para descrever e definir o conteúdo de uma página Web em um formato estruturado.
-> [Fundação Mozilla] 
+>[Fundação Mozilla] 
 
 Quando acessamos um site na internet através de um endereço eletrônico, informamos ao navegador onde ele precisa baixar os arquivos que serão interpretados, e assim prosseguir com visualização do conteúdo.
 
