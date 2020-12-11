@@ -11,20 +11,15 @@ Graças à comunidade World Wide Web Consortium ([W3C]) os navegadores vem ao lo
 
 Quando uma pessoa decide construir um site, é necessário que ela se comunique com o navegador através da linguagem de marcação em hipertexto (HTML). O navegador por sua vez interpreta essas orientações através de um roteiro elaborado pelo desenvolvedor, que finalmente mostra o conteúdo para o visitante. 
 
-<div class="quote-box">
-    <q>
-    HyperText Markup Language (HTML) é a linguagem usada para descrever e definir o conteúdo de uma página Web em um formato estruturado.
-    </q>
-    <p class="quote-author">-- <a href="[mozilla]"> Fundação Mozilla</a></p>
-</div> 
+>HyperText Markup Language (HTML) é a linguagem usada para descrever e definir o conteúdo de uma página Web em um formato estruturado.
+> [Fundação Mozilla] 
 
 Quando acessamos um site na internet através de um endereço eletrônico, informamos ao navegador onde ele precisa baixar os arquivos que serão interpretados, e assim prosseguir com visualização do conteúdo.
 
 (gif acessando a wikipedia)
 
-<div class="quote-box">
-    <p>Navegadores são sistemas utilizados para acessar a rede e suportam controle sobre vídeos, audios, imagens, e cógidos.</p>
-</div> 
+>Navegadores são sistemas utilizados para acessar a rede e suportam controle sobre vídeos, audios, imagens, e cógidos.
+
 
 A tecnologia proporcionada pelos navegadores transformou a forma de se comunicar. Ao abrirmos um livro, conseguimos obter informações apenas em forma de texto e imagens. Com a ajuda de um navegador é possível absorver o conhecimento com a interação do leitor, convergindo teoria e pratica na mesma experiência. 
 
@@ -44,5 +39,5 @@ E com a chegada da inteligência artificial, já é possível treinar robôs par
 
 
 [W3C]: https://www.w3.org/
-[Mozilla]: https://developer.mozilla.org/pt-BR/docs/Web
+[Fundação Mozilla]: https://developer.mozilla.org/pt-BR/docs/Web
 
