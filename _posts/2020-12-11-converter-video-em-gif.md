@@ -10,4 +10,4 @@ Estava de boa aqui trabalhando no meu site, quando de repente o plugin de uma fe
 
 A maneira mais conveniente que me veio em mente foi fazer um screencast com a ferramente nativa do gnome, que pode ser ativada através do atalho `Ctrl` + `Alt` + `Shift` + `R`. Um círculo vermelho aparece no canto superior direito do monitor indicando que a tela está sendo gravada. Aí é só apertar `Ctrl` + `Alt` + `Shift` + `R` novamente quando a gravação estiver concluída que a ferramenta joga a gravação direto na pasta 'Vídeos' do nosso sistema. Legal!
 
-<img src="https://github.com/PinheiroCosta/PinheiroCosta.github.io/raw/master/_images/erro.gif" alt="gif" width="600"/>
+<img src="https://github.com/PinheiroCosta/PinheiroCosta.github.io/raw/master/_images/erro.gif" alt="gif" width="800"/>
