@@ -33,7 +33,7 @@ permalink: /:title/
 github_username: PinheiroCosta
 
 show_excerpts: true
-
+markdown: GFM
 header_pages:
   - home.html
   - articles.html
