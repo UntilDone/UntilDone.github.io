@@ -401,7 +401,15 @@
   }
 }
 
+/**
+ * Gifs
+ */
 
+img[alt=gif] {
+  width: 600;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /**
  * Pagination navbar
