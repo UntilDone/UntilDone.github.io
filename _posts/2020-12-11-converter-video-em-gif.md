@@ -3,7 +3,7 @@ layout: post
 title: Como converter video em gif 
 date: 2020-07-08
 categories: Bash
-published: true
+published: false
 ---
 
 Estava de boa aqui trabalhando no meu site, quando de repente o plugin de uma ferramenta que uso pra editar meus códigos mostrou um erro na tela. Resolvi então fazer uma pausa e reportar o bug no repositório dos desenvolvedores do plugin. Conforme eu preenchia o formulário, percebi que demonstrar o problema com um gif ao invés de vários screenshots poderia facilitar bastante a vida da pessoa que fosse receber o relatório.
