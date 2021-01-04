@@ -15,7 +15,9 @@ A maneira mais conveniente que me veio em mente foi fazer um screencast com a fe
 Mas como infelizmente alguns sites não aceitam webm incorporados em suas páginas. Converter pra gif me pareceu uma boa opção.
 Para isso utilizei a ferramenta [FFmpeg](https://ffmpeg.org/).
 
-```  $ ffmpeg -y -i "mywebmfile.webm" -vf palettegen "palette.png" ```
+```shell 
+$ ffmpeg -y -i "mywebmfile.webm" -vf palettegen "palette.png" 
+```
 
 > "-y" é aplicado para sobrescrever forçadamente o arquivo de destino, sem precisar da nossa confirmação.
 
