@@ -1,7 +1,18 @@
 /**
+ * Body
+ */
+
+li {
+  p { 
+  text-indent: 2em;
+  text-align: justify;
+  }
+}
+
+/**
  * Site header
  */
- .site-header {
+.site-header {
   background-color: $header-color;
   line-height: $base-line-height * $base-font-size * 3.25;
   min-height: $spacing-unit * 1.865;  
