@@ -386,7 +386,10 @@ li {
     .quote-author {
       font-size: medium;
       text-align: right;
-    } 
+    }
+    p {
+      text-indent: 0;
+    }
   }
 
 }
