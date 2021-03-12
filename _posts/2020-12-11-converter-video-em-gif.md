@@ -19,10 +19,10 @@ Para isso utilizei a ferramenta [FFmpeg](https://ffmpeg.org/).
 $ ffmpeg -y -i "mywebmfile.webm" -vf palettegen "palette.png" 
 ```
 
-> "-y" é aplicado para sobrescrever forçadamente o arquivo de destino, sem precisar da nossa confirmação.
+> "-y" é aplicado para sobrescrever o arquivo de destino, sem precisar da nossa confirmação.
 
-> "-i" indica que o proximo parametro deve ser o arquivo de entrada (input), no nosso caso o arquivo webm.
+> "-i" indica que o próximo parametro deve ser o arquivo de entrada (input), no nosso caso o arquivo webm.
 
-> "-v" ativa o modo 'verborrágico' mostrando a saída de cada etapa do processo.
+> "-v" ativa o modo 'verboso' mostrando a saída de cada etapa do processo.
 
 > "-f" força um formato de saída para o comando a ser executado, neste caso o formato png.
