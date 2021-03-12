@@ -325,6 +325,7 @@ li {
 .post-content {
   margin-bottom: $spacing-unit;
   margin-top: $spacing-unit;
+  max-width: 900px;
   padding: 30px;
   text-align: justify;
   background-color: $content-color;
