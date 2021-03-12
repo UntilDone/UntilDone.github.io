@@ -190,7 +190,7 @@ li p { text-indent: 2em; text-align: justify; }
 .page-content .emphasis { color: #239e04; }
 .page-content .intro { margin-top: 140px; margin-bottom: 210px; }
 .page-content .intro .intro-content { max-width: 700px; }
-.page-content h1 { font-weight: bold; }
+.page-content h1 { font-weight: bold; margin-bottom: 50px; }
 @media screen and (min-width: 900px) { .page-content h1 { font-size: 3.5rem; } }
 @media screen and (max-width: 600px) { .page-content { position: relative; font-size: 0.9rem; } }
 .page-content .cursor-blink { animation: blink 1s infinite; width: 10px; /* moving cursor */ }
@@ -207,7 +207,7 @@ li p { text-indent: 2em; text-align: justify; }
 
 .post-link { display: block; font-size: 1.5rem; }
 
-.post-date { background-image: linear-gradient(to bottom, #239e04 0%, #0d3b01 100%); color: #b9b9b9; width: 17.5%; margin-left: -35px; margin-bottom: 20px; padding: 5px 15px 5px 0px; text-align: right; font-weight: 400; border-radius: 0px 5px 5px 0px; box-shadow: 0px 0px 3px 1px #292929; }
+.post-date { background-image: linear-gradient(to bottom, #239e04 0%, #0d3b01 100%); color: #b9b9b9; width: 17.5%; margin-left: -35px; margin-bottom: 40px; padding: 5px 15px 5px 0px; text-align: right; font-weight: 400; border-radius: 0px 5px 5px 0px; box-shadow: 0px 0px 3px 1px #292929; }
 
 .author { display: grid; grid-template-columns: auto auto; background-color: #303030; border-radius: 100px 200px; }
 .author img { border: 2px solid; border-radius: 50%; border-color: #dad8d8; box-shadow: 1px 1px 2px 2px #555; position: relative; right: 20px; bottom: 10px; }
