@@ -41,7 +41,7 @@ header_pages:
   - help.html
 
 # Build settings
-remote_theme: grimorio-script/minima
+remote_theme: PinheiroCosta/minima
 
 # Skin 
 minima:
