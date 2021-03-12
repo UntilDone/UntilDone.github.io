@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Como converter video em gif | PinheiroCosta</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Como converter video em gif" />
+<meta property="og:locale" content="en_us" />
+<meta name="description" content="Estava de boa aqui trabalhando no meu site, quando de repente o plugin da ferramenta que uso pra editar meus códigos mostrou um erro na tela. Resolvi então fazer uma pausa e reportar o bug no repositório dos desenvolvedores do plugin. Conforme eu preenchia o formulário, percebi que demonstrar o problema com um gif ao invés de vários screenshots seria mais eficiente." />
+<meta property="og:description" content="Estava de boa aqui trabalhando no meu site, quando de repente o plugin da ferramenta que uso pra editar meus códigos mostrou um erro na tela. Resolvi então fazer uma pausa e reportar o bug no repositório dos desenvolvedores do plugin. Conforme eu preenchia o formulário, percebi que demonstrar o problema com um gif ao invés de vários screenshots seria mais eficiente." />
+<link rel="canonical" href="http://localhost:4000/converter-video-em-gif/" />
+<meta property="og:url" content="http://localhost:4000/converter-video-em-gif/" />
+<meta property="og:site_name" content="PinheiroCosta" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-12-11T00:00:00-03:00" />
+<script type="application/ld+json">
+{"description":"Estava de boa aqui trabalhando no meu site, quando de repente o plugin da ferramenta que uso pra editar meus códigos mostrou um erro na tela. Resolvi então fazer uma pausa e reportar o bug no repositório dos desenvolvedores do plugin. Conforme eu preenchia o formulário, percebi que demonstrar o problema com um gif ao invés de vários screenshots seria mais eficiente.","@type":"BlogPosting","headline":"Como converter video em gif","dateModified":"2020-12-11T00:00:00-03:00","datePublished":"2020-12-11T00:00:00-03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/converter-video-em-gif/"},"url":"http://localhost:4000/converter-video-em-gif/","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="PinheiroCosta" />
+
+</head>
+
+<body><header class="site-header">
+  <div class="wrapper">
+    <bdi class="site-title"><a rel="author" href="/">PinheiroCosta</a></bdi></div>
+</header>
+
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <div class="post-content e-content" itemprop="articleBody" header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Como converter video em gif</h1>
+    <div class="post-date"><time class="dt-published" datetime="2020-12-11T00:00:00-03:00" itemprop="datePublished">
+        Dec 11, 2020
+      </time></div>
+  </header>
+    <p>Estava de boa aqui trabalhando no meu site, quando de repente o plugin da ferramenta que uso pra editar meus códigos mostrou um erro na tela. Resolvi então fazer uma pausa e reportar o bug no repositório dos desenvolvedores do plugin. Conforme eu preenchia o formulário, percebi que demonstrar o problema com um gif ao invés de vários screenshots seria mais eficiente.</p>
+<p>A maneira mais conveniente que me veio em mente foi fazer um screencast com a ferramenta nativa do gnome, que pode ser ativada através do atalho <code>Ctrl</code> + <code>Alt</code> + <code>Shift</code> + <code>R</code>. Um círculo vermelho/laranja aparece no canto superior direito do monitor indicando que a tela está sendo gravada. Aí é só apertar <code>Ctrl</code> + <code>Alt</code> + <code>Shift</code> + <code>R</code> mais uma vez quando a gravação estiver concluída que a ferramenta joga a gravação no formatdo .webm direto na pasta 'Vídeos' do nosso sistema. Legal!</p>
+<p><img src="https://github.com/PinheiroCosta/PinheiroCosta.github.io/raw/master/_images/erro.gif" alt="gif" /></p>
+<p>Mas como infelizmente alguns sites não aceitam webm incorporados em suas páginas. Converter pra gif me pareceu uma boa opção.
+Para isso utilizei a ferramenta <a href="https://ffmpeg.org/">FFmpeg</a>.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>ffmpeg <span class="nt">-y</span> <span class="nt">-i</span> <span class="s2">"mywebmfile.webm"</span> <span class="nt">-vf</span> palettegen <span class="s2">"palette.png"</span> 
+</code></pre></div></div>
+<blockquote>
+<p>&quot;-y&quot; é aplicado para sobrescrever forçadamente o arquivo de destino, sem precisar da nossa confirmação.</p>
+</blockquote>
+<blockquote>
+<p>&quot;-i&quot; indica que o proximo parametro deve ser o arquivo de entrada (input), no nosso caso o arquivo webm.</p>
+</blockquote>
+<blockquote>
+<p>&quot;-v&quot; ativa o modo 'verborrágico' mostrando a saída de cada etapa do processo.</p>
+</blockquote>
+<blockquote>
+<p>&quot;-f&quot; força um formato de saída para o comando a ser executado, neste caso o formato png.</p>
+</blockquote>
+
+  </div><a class="u-url" href="/converter-video-em-gif/" hidden></a>
+</article>
+
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Blog pessoal do Rômulo. Criado com <a href="https://jekyllrb.com/">Jekyll</a> e café.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/PinheiroCosta" title="PinheiroCosta"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://www.instagram.com/Rom.costa" title="Rom.costa"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#instagram"></use></svg></a></li></ul>
+
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>
+
