@@ -136,7 +136,7 @@ table td { border: 1px solid #606060; }
 @media screen and (max-width: 900px) { table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; -ms-overflow-style: -ms-autohiding-scrollbar; } }
 
 /** Body */
-li p { text-indent: 2em; text-align: justify; }
+li p { text-indent: 2em; text-align: justify; max-width: 900px; }
 
 /** Site header */
 .site-header { background-color: #303030; line-height: 97.5px; min-height: 37.3px; position: relative; }
@@ -205,7 +205,7 @@ li p { text-indent: 2em; text-align: justify; }
 
 .post-meta { color: #b9b9b9; }
 
-.post-link { display: block; font-size: 1.5rem; }
+.post-link { display: block; max-width: 900px; font-size: 1.5rem; }
 
 .post-date { background-image: linear-gradient(to bottom, #239e04 0%, #0d3b01 100%); color: #b9b9b9; width: 17.5%; margin-left: -35px; margin-bottom: 40px; padding: 5px 15px 5px 0px; text-align: right; font-weight: 400; border-radius: 0px 5px 5px 0px; box-shadow: 0px 0px 3px 1px #292929; }
 
