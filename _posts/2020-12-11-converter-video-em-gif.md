@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Como converter video em gif 
+title: Como webm em gif 
 date: 2020-12-11
 categories: Bash
 published: true
