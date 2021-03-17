@@ -17,6 +17,6 @@ Welcome to my programming blog. it can be accessed at https://pinheirocosta.gith
 
 ## TODO
 
-* implement auto translation on posts from pt-br to en-us []
-* create a favicon []
+* implement auto translation on posts from pt-br to en-us - []
+* create a favicon - []
 
