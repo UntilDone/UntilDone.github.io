@@ -14,7 +14,7 @@ A maneira mais conveniente que me veio em mente foi fazer um screencast com a fe
 
 Mas como infelizmente alguns sites não aceitam webm incorporados em suas páginas. Converter pra gif me pareceu ser uma boa opção. Para isso utilizei a ferramenta [FFmpeg](https://ffmpeg.org/). Já tinha ouvido falar dessa ferramenta mas nunca a tinha usado antes. Ela é bastante versátil e me pareceu ser bem completa, capaz de realizar toda sorte de trabalhos com audio e vídeo. 
 
-Depois de ler algumas instruções na página oficial e artigos que encontrei na internet, consegui elaborar um script pra fazer todo trabalho por nós. Você pode encontrar o script no meu reposiório, [clicando aqui](https://github.com/PinheiroCosta/webmtogif). E para usá-lo é simples, basta executar o arquivo *webmtogif* usando o nome do arquivo como parametro:
+Depois de ler algumas instruções na página oficial e artigos que encontrei na internet, consegui elaborar um script pra fazer todo trabalho por nós. Você pode encontrar o script no meu reposiório, [clicando aqui](https://github.com/PinheiroCosta/webmtogif). E para usá-lo é simples, basta executar o arquivo *webmtogif* usando o nome do arquivo como parâmetro:
 ```shell
 $ bash webmtogif nomedoarquivo.webm
 ```
