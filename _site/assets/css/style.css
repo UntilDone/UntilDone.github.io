@@ -188,7 +188,7 @@ li p { text-indent: 2em; text-align: justify; max-width: 900px; }
 /** Page content */
 .page-content { flex: 1 0 auto; padding: 20px 0; /* blinking cursor */ }
 .page-content .emphasis { color: #239e04; }
-.page-content .intro { margin-top: 140px; margin-bottom: 210px; }
+.page-content .intro { margin-top: 100px; margin-bottom: 210px; }
 .page-content .intro .intro-content { max-width: 700px; }
 .page-content h1 { font-weight: bold; margin-bottom: 50px; }
 @media screen and (min-width: 900px) { .page-content h1 { font-size: 3.5rem; } }
