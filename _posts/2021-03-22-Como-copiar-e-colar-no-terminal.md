@@ -2,11 +2,11 @@
 layout: post
 title: Como copiar e colar no terminal
 date: 2021-03-23
-categories: Bash
+categories: Bash, copiar, colar, xclip, linha de comando
 published: true
 ---
 
-```CTRL+C``` e ```CTRL+V``` são atalhos muito úteis no dia-a-dia. Acontece que se você é usuário do terminal (linha de comando), já deve ter percebido que o atalho ```CTRL+C``` está associado com a interrupção do processo em andamento.
+```CTRL+C``` e ```CTRL+V``` são atalhos muito úteis no dia-a-dia. Acontece que se você é usuário da linha de comando, já deve ter percebido que o atalho ```CTRL+C``` está associado com a interrupção do processo em andamento.
 
 >**Atalho do terminal Gnome**
 >

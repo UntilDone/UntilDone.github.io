@@ -2,7 +2,7 @@
 layout: post
 title: Como converter webm em gif 
 date: 2020-12-11
-categories: Bash
+categories: bash, gif, webm
 published: true
 ---
 
