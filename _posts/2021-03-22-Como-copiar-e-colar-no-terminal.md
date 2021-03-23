@@ -5,6 +5,7 @@ date: 2021-03-23
 categories: Bash, copiar, colar, xclip, linha de comando
 published: true
 ---
+![webp](https://raw.githubusercontent.com/PinheiroCosta/PinheiroCosta.github.io/master/_images/terminal.webp)
 
 ```CTRL+C``` e ```CTRL+V``` são atalhos muito úteis no dia-a-dia. Acontece que se você é usuário da linha de comando, já deve ter percebido que o atalho ```CTRL+C``` está associado com a interrupção do processo em andamento.
 
