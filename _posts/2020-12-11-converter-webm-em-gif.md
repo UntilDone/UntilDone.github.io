@@ -1,6 +1,6 @@
 ---
 layout: post
-title: converter webm em gif via script
+title: converter webm em gif
 date: 2020-12-11
 categories: bash, gif, webm
 published: true

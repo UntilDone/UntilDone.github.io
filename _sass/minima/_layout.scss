@@ -279,8 +279,7 @@ li {
   background-image: linear-gradient(to bottom, $link-base-color 0%, darken($link-base-color, 20%) 100%); 
   color: $brand-color;
   width: 17.5%;
-  margin-left: -35px;
-  margin-bottom: 40px;
+  margin: 100px -35px;
   padding: 5px 15px 5px 0px;
   text-align: right;
   font-weight: 400;
@@ -324,6 +323,10 @@ li {
   }
 }
 
+.post-thumbnail {
+  float: right;
+  shape-margin: 2%;
+}
 .post-content {
   margin-bottom: $spacing-unit;
   margin-top: $spacing-unit;

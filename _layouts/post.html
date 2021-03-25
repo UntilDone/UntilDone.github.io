@@ -18,14 +18,16 @@ layout: default
         </time>
       {%- endif -%}
       {%- if page.author -%}
-        • {% for author in page.author %}
+         {% for author in page.author %}
           <span itemprop="author" itemscope itemtype="http://schema.org/Person">
             <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
             {%- if forloop.last == false %}, {% endif -%}
         {% endfor %}
       {%- endif -%}
     </div>
-  </header>
+    <a  style="shape-outside: url({{page.thumbnail}});" class="post-thumbnail" title="{{page.categories | array_to_sentence_string }}" href="{{page.url}}">
+    <img width="340" alt="Bash Logo Colored" src="{{page.thumbnail}}">
+  </a>
     {{ content }}
   </div>
 

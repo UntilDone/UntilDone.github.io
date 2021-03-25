@@ -7,15 +7,7 @@ published: true
 thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Bash_Logo_Colored.svg/512px-Bash_Logo_Colored.svg.png'
 ---
 
-<a title="{{page.categories | array_to_sentence_string }}" href="{{page.url}}">
-<img width="240" alt="Bash Logo Colored" src="{{page.thumbnail}}">
-</a>
-
 ```CTRL+C``` e ```CTRL+V``` são atalhos muito úteis no dia-a-dia. Acontece q se você é usuário da linha de comando, já deve ter percebido que o atalho ```CTRL+C``` está associado com a interrupção do processo em andamento.
-
->**Atalho do terminal Gnome**
->
->Para copiar o texto selecionado dentro do terminal você pode utilizar o atalho ```CTRL+SHIFT+C``` e colar com ``` CTRL+SHIFT+V```.
 
 
 ### **Copiar e colar com alias**.
@@ -25,6 +17,10 @@ Mas e se precisarmos copiar um documento inteiro, ou colar o conteúdo de algum 
 alias nome_do_alias="comando-a-ser-executado"
 ```
 A declaração de um alias começa com a palavra chave reservada _alias_ seguida do nome que você escolher para esse alias, o sinal de igual ```=``` e por fim o comando desejado escrito dentro de aspas. Cada alias precisa ser declarado em uma nova linha.
+
+>**Atalho do terminal Gnome**
+>
+>Para copiar o texto selecionado dentro do terminal você também pode utilizar o atalho ```CTRL+SHIFT+C``` e colar com ``` CTRL+SHIFT+V```.
 
 ### **Copiar e colar com xclip**
 

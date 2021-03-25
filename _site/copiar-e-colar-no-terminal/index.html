@@ -7,8 +7,8 @@
 <meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Copiar e colar no terminal" />
 <meta property="og:locale" content="pt_br" />
-<meta name="description" content="Aqui você encontrará artigos e tutoriais rápidos sobre programação, e administração de sistemas GNU/Linux." />
-<meta property="og:description" content="Aqui você encontrará artigos e tutoriais rápidos sobre programação, e administração de sistemas GNU/Linux." />
+<meta name="description" content="CTRL+C e CTRL+V são atalhos muito úteis no dia-a-dia. Acontece q se você é usuário da linha de comando, já deve ter percebido que o atalho CTRL+C está associado com a interrupção do processo em andamento." />
+<meta property="og:description" content="CTRL+C e CTRL+V são atalhos muito úteis no dia-a-dia. Acontece q se você é usuário da linha de comando, já deve ter percebido que o atalho CTRL+C está associado com a interrupção do processo em andamento." />
 <link rel="canonical" href="http://localhost:4000/copiar-e-colar-no-terminal/" />
 <meta property="og:url" content="http://localhost:4000/copiar-e-colar-no-terminal/" />
 <meta property="og:site_name" content="PinheiroCosta" />
@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Copiar e colar no terminal" />
 <script type="application/ld+json">
-{"headline":"Copiar e colar no terminal","dateModified":"2021-03-23T00:00:00-03:00","datePublished":"2021-03-23T00:00:00-03:00","description":"Aqui você encontrará artigos e tutoriais rápidos sobre programação, e administração de sistemas GNU/Linux.","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/copiar-e-colar-no-terminal/"},"url":"http://localhost:4000/copiar-e-colar-no-terminal/","@context":"https://schema.org"}</script>
+{"headline":"Copiar e colar no terminal","dateModified":"2021-03-23T00:00:00-03:00","datePublished":"2021-03-23T00:00:00-03:00","description":"CTRL+C e CTRL+V são atalhos muito úteis no dia-a-dia. Acontece q se você é usuário da linha de comando, já deve ter percebido que o atalho CTRL+C está associado com a interrupção do processo em andamento.","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/copiar-e-colar-no-terminal/"},"url":"http://localhost:4000/copiar-e-colar-no-terminal/","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="PinheiroCosta" />
 
@@ -37,20 +37,19 @@
     <div class="post-date"><time class="dt-published" datetime="2021-03-23T00:00:00-03:00" itemprop="datePublished">
         Mar 23, 2021
       </time></div>
-  </header>
-    <a title="Bash, copiar, colar, xclip, linha_de_comando, and alias" href="/copiar-e-colar-no-terminal/">
-<img width="240" alt="Bash Logo Colored" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Bash_Logo_Colored.svg/512px-Bash_Logo_Colored.svg.png">
-</a>
-<p><code>CTRL+C</code> e <code>CTRL+V</code> são atalhos muito úteis no dia-a-dia. Acontece q se você é usuário da linha de comando, já deve ter percebido que o atalho <code>CTRL+C</code> está associado com a interrupção do processo em andamento.</p>
-<blockquote>
-<p><strong>Atalho do terminal Gnome</strong></p>
-<p>Para copiar o texto selecionado dentro do terminal você pode utilizar o atalho <code>CTRL+SHIFT+C</code> e colar com <code>CTRL+SHIFT+V</code>.</p>
-</blockquote>
+    <a  style="shape-outside: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Bash_Logo_Colored.svg/512px-Bash_Logo_Colored.svg.png);" class="post-thumbnail" title="Bash, copiar, colar, xclip, linha_de_comando, and alias" href="/copiar-e-colar-no-terminal/">
+    <img width="340" alt="Bash Logo Colored" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Bash_Logo_Colored.svg/512px-Bash_Logo_Colored.svg.png">
+  </a>
+    <p><code>CTRL+C</code> e <code>CTRL+V</code> são atalhos muito úteis no dia-a-dia. Acontece q se você é usuário da linha de comando, já deve ter percebido que o atalho <code>CTRL+C</code> está associado com a interrupção do processo em andamento.</p>
 <h3 id="strongcopiar-e-colar-com-aliasstrong"><strong>Copiar e colar com alias</strong>.</h3>
 <p>Mas e se precisarmos copiar um documento inteiro, ou colar o conteúdo de algum arquivo diretamente em outro? Usar os atalhos do gnome seria cansativo e repetitivo, especialmente se precisarmos copiar e colar com certa frequência. Nessa horas um alias pode ajudar. E para criar um no bash é muito simples, basta adicionar uma linha no arquivo <em>.bashrc</em> que fica localizado na pasta raiz do usuário com a seguinte sintaxe:</p>
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">alias</span> <span class="n">nome_do_alias</span><span class="o">=</span><span class="s2">"comando-a-ser-executado"</span>
 </code></pre></div></div>
 <p>A declaração de um alias começa com a palavra chave reservada <em>alias</em> seguida do nome que você escolher para esse alias, o sinal de igual <code>=</code> e por fim o comando desejado escrito dentro de aspas. Cada alias precisa ser declarado em uma nova linha.</p>
+<blockquote>
+<p><strong>Atalho do terminal Gnome</strong></p>
+<p>Para copiar o texto selecionado dentro do terminal você também pode utilizar o atalho <code>CTRL+SHIFT+C</code> e colar com <code>CTRL+SHIFT+V</code>.</p>
+</blockquote>
 <h3 id="strongcopiar-e-colar-com-xclipstrong"><strong>Copiar e colar com xclip</strong></h3>
 <p>A ferramenta <em>xclip</em> é fácil de usar se encaixa bem pra essa tarefa. Vamos criar logo um alias para copiar e outro para colar, que mais abaixo deixo uma explicação de como eles funcionam.</p>
 <p><strong>Copiar</strong></p>
