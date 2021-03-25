@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Como copiar e colar no terminal
+title: Copiar e colar no terminal
 date: 2021-03-23
-categories: Bash, copiar, colar, xclip, linha de comando
+categories: Bash, copiar, colar, xclip, linha de comando, alias
 published: true
 ---
 ![webp](https://raw.githubusercontent.com/PinheiroCosta/PinheiroCosta.github.io/master/_images/terminal.webp)
