@@ -32,8 +32,8 @@ layout: default
           </a>
         </h3>
         {%- if post.thumbnail -%}
-        <a href="{{post.url}}">
-        <img width="240" style="display: inline-block;" src="{{ post.thumbnail }}"></img>
+        <a class="post-list-thumbnail" href="{{post.url}}">
+          <img width="240" style="display: inline-block;" src="{{ post.thumbnail }}"></img>
         </a>
         {%- endif -%} 
         {%- if site.show_excerpts -%}
