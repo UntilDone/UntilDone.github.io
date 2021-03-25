@@ -55,10 +55,13 @@ plugins:
   - jekyll-feed
   - jekyll-remote-theme
   - jekyll-sitemap
+  - jekyll-paginate
   - jemoji
 
 # Pagination
 
+paginate_path: "/logs/page:num/"
+pagination: 1
 
 # Exclude from processing.
 # The following items will not be processed, by default.
