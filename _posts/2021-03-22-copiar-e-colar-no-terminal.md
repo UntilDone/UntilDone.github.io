@@ -2,12 +2,16 @@
 layout: post
 title: Copiar e colar no terminal
 date: 2021-03-23
-categories: Bash, copiar, colar, xclip, linha de comando, alias
+categories: Bash copiar colar xclip linha_de_comando alias
 published: true
+thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Bash_Logo_Colored.svg/512px-Bash_Logo_Colored.svg.png'
 ---
-![webp](https://raw.githubusercontent.com/PinheiroCosta/PinheiroCosta.github.io/master/_images/terminal.webp)
 
-```CTRL+C``` e ```CTRL+V``` são atalhos muito úteis no dia-a-dia. Acontece que se você é usuário da linha de comando, já deve ter percebido que o atalho ```CTRL+C``` está associado com a interrupção do processo em andamento.
+<a title="{{page.categories | array_to_sentence_string }}" href="{{page.url}}">
+<img width="240" alt="Bash Logo Colored" src="{{page.thumbnail}}">
+</a>
+
+```CTRL+C``` e ```CTRL+V``` são atalhos muito úteis no dia-a-dia. Acontece q se você é usuário da linha de comando, já deve ter percebido que o atalho ```CTRL+C``` está associado com a interrupção do processo em andamento.
 
 >**Atalho do terminal Gnome**
 >
@@ -16,7 +20,7 @@ published: true
 
 ### **Copiar e colar com alias**.
 
-Mas e se precisarmos copiar um documento inteiro, ou colar o conteúdo de algum arquivo diretamente em outro? Usar os atalhos do gnome seria cansativo e repetitivo, especialmente se precisarmos copiar e colar com certa frequência. Nessas horas um alias pode ajudar. E para criar um no bash é muito simples, basta adicionar uma linha no arquivo _.bashrc_ que fica localizado na pasta raiz do usuário com a seguinte sintaxe:
+Mas e se precisarmos copiar um documento inteiro, ou colar o conteúdo de algum arquivo diretamente em outro? Usar os atalhos do gnome seria cansativo e repetitivo, especialmente se precisarmos copiar e colar com certa frequência. Nessa horas um alias pode ajudar. E para criar um no bash é muito simples, basta adicionar uma linha no arquivo _.bashrc_ que fica localizado na pasta raiz do usuário com a seguinte sintaxe:
 ```ruby
 alias nome_do_alias="comando-a-ser-executado"
 ```
