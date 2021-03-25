@@ -4,6 +4,7 @@ title: converter webm em gif
 date: 2020-12-11
 categories: bash, gif, webm
 published: true
+thumbnail: https://upload.wikimedia.org/wikibooks/zh/0/06/Firefox.svg
 ---
 
 Estava fazendo uns ajustes no blog, quando de repente o plugin da ferramenta do editor de códigos mostrou uma mensagem de erro na tela. Resolvi então fazer uma pausa e reportar o bug no repositório dos desenvolvedores do plugin. Conforme eu preenchia o formulário, percebi que demonstrar o problema com um gif ao invés de várias imagens seria mais eficiente.

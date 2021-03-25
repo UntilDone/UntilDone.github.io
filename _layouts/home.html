@@ -31,9 +31,13 @@ layout: default
             {{ post.title | escape }}
           </a>
         </h3>
+        {%- if post.thumbnail -%}
+        <img width="240" style="display: inline-block;" src="{{ post.thumbnail }}"></img>
+        {%- endif -%} 
         {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
+        {{ post.excerpt }}
         {%- endif -%}
+        
       </li>
       {%- endfor -%}
     </ul>
