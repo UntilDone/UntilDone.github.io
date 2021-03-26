@@ -4,7 +4,7 @@ title: Rastrear mensagens de erro no Bash
 date: 2021-03-26
 categories: Bash, troubleshooting, cat, grep, wc
 published: true
-thumbnail: https://upload.wikimedia.org/wikipedia/commons/5/55/Tux_Enhanced.svg
+thumbnail: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Bash_Logo_Colored.svg/512px-Bash_Logo_Colored.svg.png
 ---
 
 Estou na linha de comando quando me deparo com uma mensagem de erro. Mas infelizmente não existe referência para o arquivo de origem nesta mensagem. E o que encontrei na internet foram artigos bem genéricos sobre o problema, e agora? Neste artigo compartilho alguns comandos que utilizei pra resolver este impasse. Segue abaixo a mensagem:
