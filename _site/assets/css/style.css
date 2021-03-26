@@ -201,7 +201,8 @@ li p { text-indent: 2em; text-align: justify; max-width: 700px; display: inline-
 .post-list-heading { font-size: 1.75rem; }
 
 .post-list { margin-left: 0; list-style: none; }
-.post-list > li { margin-bottom: 20px; }
+.post-list > li { margin-bottom: 60px; }
+.post-list p { margin-top: 5%; }
 
 .post-list-thumbnail { text-decoration: none; }
 
