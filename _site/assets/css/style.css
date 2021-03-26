@@ -58,13 +58,13 @@
 .highlight .vi { color: #EEFFFF; }
 .highlight .il { color: #F78C6C; }
 
-html { font-size: 23px; }
+html { font-size: 22px; }
 
 /** Reset some basic elements */
 body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure { margin: 0; padding: 0; }
 
 /** Basic styling */
-body { font: 300 23px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", "Segoe UI Symbol", "Segoe UI Emoji", "Apple Color Emoji", Roboto, Helvetica, Arial, sans-serif; color: #dad8d8; background-color: #151515; -webkit-text-size-adjust: 100%; -webkit-font-feature-settings: "kern" 1; -moz-font-feature-settings: "kern" 1; -o-font-feature-settings: "kern" 1; font-feature-settings: "kern" 1; font-kerning: normal; display: flex; min-height: 100vh; flex-direction: column; overflow-wrap: break-word; }
+body { font: 300 22px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", "Segoe UI Symbol", "Segoe UI Emoji", "Apple Color Emoji", Roboto, Helvetica, Arial, sans-serif; color: #dad8d8; background-color: #151515; -webkit-text-size-adjust: 100%; -webkit-font-feature-settings: "kern" 1; -moz-font-feature-settings: "kern" 1; -o-font-feature-settings: "kern" 1; font-feature-settings: "kern" 1; font-kerning: normal; display: flex; min-height: 100vh; flex-direction: column; overflow-wrap: break-word; }
 
 /** Set `margin-bottom` to maintain vertical rhythm */
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight { margin-bottom: 10px; }
@@ -80,7 +80,7 @@ img { max-width: 100%; vertical-align: middle; }
 /** Figures */
 figure > img { display: block; }
 
-figcaption { font-size: 20.125px; }
+figcaption { font-size: 19.25px; }
 
 /** Lists */
 ul, ol { margin-left: 20px; }
@@ -139,7 +139,7 @@ table td { border: 1px solid #606060; }
 li p { text-indent: 2em; text-align: justify; max-width: 700px; display: inline-block; vertical-align: middle; margin-left: 2%; }
 
 /** Site header */
-.site-header { background-color: #303030; line-height: 112.125px; min-height: 37.3px; position: relative; }
+.site-header { background-color: #303030; line-height: 107.25px; min-height: 37.3px; position: relative; }
 
 .site-title { font-size: 1.425rem; font-weight: 300; letter-spacing: -1px; float: right; bottom: 8px; }
 .site-title a { color: #c6c6c6; text-decoration: none; }
@@ -158,7 +158,7 @@ li p { text-indent: 2em; text-align: justify; max-width: 700px; display: inline-
   .site-nav label[for="nav-trigger"] { display: block; }
   .site-nav .menu-icon { display: none; }
   .site-nav input ~ .trigger { display: block; }
-  .site-nav .page-link { display: inline; font-size: 28.175px; margin-left: auto; }
+  .site-nav .page-link { display: inline; font-size: 26.95px; margin-left: auto; }
   .site-nav .page-link:not(:last-child) { margin-right: 30px; } }
 
 /** Site footer */
