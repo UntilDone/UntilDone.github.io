@@ -337,7 +337,11 @@ li {
 .post-thumbnail {
   float: right;
   shape-margin: 2%;
-  margin-left: 1%;
+  margin-left: 20px;
+  position: relative;
+  left: 80px;
+  bottom: 200px;
+  width: 406px;
 }
 .post-content {
   margin-bottom: $spacing-unit;

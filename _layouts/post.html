@@ -25,7 +25,7 @@ layout: default
         {% endfor %}
       {%- endif -%}
     </div>
-    <img class="post-thumbnail" style="shape-outside: url({{page.thumbnail}})" title="{{page.categories | array_to_sentence_string }}" width="340" alt="Bash Logo Colored" src="{{page.thumbnail}}">
+    <img class="post-thumbnail" style="shape-outside: url({{page.thumbnail}})" title="{{page.categories | array_to_sentence_string }}" alt="Bash Logo Colored" src="{{page.thumbnail}}">
     {{ content }}
   </div>
 
