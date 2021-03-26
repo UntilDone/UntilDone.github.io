@@ -362,11 +362,16 @@ li {
                'Open Sans',
                'Helvetica Neue',
                sans-serif;
-  h1, h2, h3 { margin-top: $spacing-unit }
-  h4, h5, h6 { margin-top: $spacing-unit }
+  h1, h2, h3 { 
+    margin-top: $spacing-unit * 4;
+  }
+  h4, h5, h6 { margin-top: $spacing-unit * 4}
   p { 
     text-indent: 2em;
     font-weight: normal;
+    line-height: 1.7;
+    font-size: 23px;
+    margin-bottom: 30px;
   }
 
   h2 {
