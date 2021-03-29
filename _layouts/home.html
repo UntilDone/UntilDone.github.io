@@ -21,7 +21,7 @@ layout: default
     {%- if page.list_title -%}
       <h2 class="post-list-heading">{{ page.list_title }}</h2>
     {%- endif -%}
-    <ul class="post-list">
+    <ul id="post-list" class="post-list">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       {%- for post in posts -%}
       <li>
@@ -47,7 +47,7 @@ layout: default
     {% if paginator.total_pages > 1 %}
 <div class="pagination">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Prev</a>
+    <a href="{{ paginator.previous_page_path | relative_url }}#post-list">&laquo; Prev</a>
   {% else %}
     <span>&laquo; Prev</span>
   {% endif %}
@@ -63,7 +63,7 @@ layout: default
   {% endfor %}
 
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
+    <a href="{{ paginator.next_page_path | relative_url }}#post-list">Next &raquo;</a>
   {% else %}
     <span>Next &raquo;</span>
   {% endif %}
