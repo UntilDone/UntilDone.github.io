@@ -4,7 +4,9 @@ Welcome to my programming blog. it can be accessed at https://pinheirocosta.gith
 
 ## Post list
 
-{{site.data.author.name}}
+{% for item in site.data.author.skills %}
+* {{item}}
+{% endfor %}
 
 * [Converter webm em gif](https://pinheirocosta.github.io/converter-video-em-gif/)
 * [Copiar e colar no Bash](https://pinheirocosta.github.io/copiar-e-colar-no-terminal/)
