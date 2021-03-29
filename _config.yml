@@ -62,7 +62,7 @@ plugins:
 # Pagination
 
 paginate: 2
-paginate_path: "/logs/page:num/"
+paginate_path: "/log/page-:num/"
 
 # Exclude from processing.
 # The following items will not be processed, by default.

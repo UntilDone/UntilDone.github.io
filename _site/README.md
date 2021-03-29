@@ -6,7 +6,7 @@ Welcome to my programming blog. it can be accessed at https://pinheirocosta.gith
 
 * [Converter webm em gif](https://pinheirocosta.github.io/converter-video-em-gif/)
 * [Copiar e colar no Bash](https://pinheirocosta.github.io/copiar-e-colar-no-terminal/)
-
+* [Rastrear mensagens de erro no Bash](https://pinheirocosta.github.io/rastrear-mensagens-de-erro-do-terminal/)
 <br>
 
 ## Acknowledgments

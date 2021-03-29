@@ -15,4 +15,7 @@
 <url>
 <loc>http://localhost:4000/</loc>
 </url>
+<url>
+<loc>http://localhost:4000/logs/page2/</loc>
+</url>
 </urlset>
