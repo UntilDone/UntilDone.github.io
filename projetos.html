@@ -3,4 +3,32 @@ layout: projects
 title: Projetos
 ---
 
-<h1> My projects </h1>
+<p align="center">
+<img class="projects-thumb" width=250 src="https://github.com/PinheiroCosta/MyScripts/raw/97722319eace982113f70993149753274e16ad9c/images/terminal.png"></img>
+</p>
+
+{% assign projects = site.data.projects %}
+
+<div class="projects-summary">
+{% for project in projects %}
+  <h1>{{ project.name }}</h1>
+  <img title="{{project.description}}" src="{{project.thumbnail}}" alt="{{project.description}}"></img>
+  <span><p>{{project.description}}</p></span>
+  <div class="project-requirement">
+    <h2>Requirements:</h2>
+    <ul>
+    {% for requirement in project.requirements %}
+      <li>
+      {{ requirement }}
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+  <h2>Instalation:</h2>
+  {{ project.instalation }}
+  <div clas=="project-howto">
+    <h2>How to use:</h2>
+    {{ project.howto }}
+  <div>
+{% endfor %}
+</div>
