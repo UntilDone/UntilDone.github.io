@@ -216,7 +216,7 @@ li p { text-indent: 2em; text-align: justify; max-width: 700px; display: inline-
 .author img { border: 2px solid; border-radius: 50%; border-color: #dad8d8; box-shadow: 1px 1px 2px 2px #555; position: relative; right: 20px; bottom: 10px; }
 
 /** Articles */
-.articles { margin: 200px 10px; }
+.articles { margin: 130px 10px; }
 .articles li { margin-top: 100px; }
 
 /** Posts */
