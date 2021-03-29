@@ -37,7 +37,7 @@ markdown: GFM
 header_pages:
   - artigos.html
   - projetos.html
-  - gists
+  - gists.html
   - contato.html
 
 # Build settings
