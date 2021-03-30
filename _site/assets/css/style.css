@@ -222,8 +222,11 @@ li p { text-indent: 2em; text-align: justify; max-width: 700px; display: inline-
 /** Projects */
 .projects-thumb { margin-top: 130px; }
 
+.project-howto { margin-bottom: 150px; }
+
 .projects-summary { margin-top: 50px; }
-.projects-summary h1, .projects-summary h2 { margin-top: 50px; }
+.projects-summary h1 { margin-top: 130px; }
+.projects-summary h2 { margin-top: 50px; }
 
 /** Posts */
 .post-header { margin-bottom: 20px; }
