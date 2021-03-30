@@ -25,7 +25,7 @@
   requirements:
     - 'bash'
     - 'Curl'
-  thumbnail: ''
+  thumbnail: 'https://raw.githubusercontent.com/PinheiroCosta/MyScripts/main/images/sendmail.gif'
   instalation: 'give execution permission with chmod +x sendmail and then just just run the script $ ./sendmail'
   howto: 'The email must be written inside of a file called mail.txt within the same directory as the script is with the following syntax.<br><br>From: "User Name" <username@gmail.com><br>
 To: "John Smith" <john@example.com><br>
