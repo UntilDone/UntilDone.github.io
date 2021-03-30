@@ -6,7 +6,7 @@
     - 'bash'
     - 'FFmpeg'
   instalation: 'Move the script to your /usr/local/bin/ directory.'
-  howto: 'webmtogif <filename.webm>  ex: $ webtogif video.webm'
+  howto: 'webmtogif <filename.webm>  ex: <code>$ webtogif video.webm</code>'
 
 - colorpick:
   name: 'Colorpick'
@@ -26,10 +26,5 @@
     - 'bash'
     - 'Curl'
   thumbnail: 'https://raw.githubusercontent.com/PinheiroCosta/MyScripts/main/images/sendmail.gif'
-  instalation: 'give execution permission with chmod +x sendmail and then just just run the script $ ./sendmail'
-  howto: 'The email must be written inside of a file called mail.txt within the same directory as the script is with the following syntax.<br><br>From: "User Name" <username@gmail.com><br>
-To: "John Smith" <john@example.com><br>
-Subject: This is a test message<br>
-<br>
-Your message goes here.<br>
-And it can be written with multiple lines.'
+  instalation: 'give execution permission with chmod +x sendmail and then just just run the script <br><code>$ ./sendmail</code>'
+  howto: 'The email must be written inside of a file called mail.txt within the same directory as the script is with the following syntax.<br><br><code style="display:block; white-space:pre-wrap">From: "User Name" <username@gmail.com><br>To: "John Smith" <john@example.com><br>Subject: This is a test message<br><br>Your message goes here.<br>And it can be written with multiple lines.</code>'

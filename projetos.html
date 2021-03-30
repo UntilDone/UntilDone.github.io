@@ -9,26 +9,28 @@ title: Projetos
 
 {% assign projects = site.data.projects %}
 
-<div class="projects-summary">
+<div class="general-summary">
 {% for project in projects %}
-  <h1>{{ project.name }}</h1>
-  <img title="{{project.description}}" src="{{project.thumbnail}}" alt="{{project.description}}"></img>
-  <span><p>{{project.description}}</p></span>
-  <div class="project-requirement">
-    <h2>Requirements:</h2>
-    <ul>
-    {% for requirement in project.requirements %}
-      <li>
-      {{ requirement }}
-      </li>
-    {% endfor %}
-    </ul>
-  </div>
-  <h2>Instalation:</h2>
-  {{ project.instalation }}
-  <div class="project-howto">
-    <h2>How to use:</h2>
-    {{ project.howto }}
-  <div>
+  <article class="project-summary post-content e-content">
+    <h1>{{ project.name }}</h1>
+    <img title="{{project.description}}" src="{{project.thumbnail}}" alt="{{project.description}}"></img>
+    <span><p>{{project.description}}</p></span>
+    <div class="project-requirement">
+      <h2>Requirements:</h2>
+      <ul>
+      {% for requirement in project.requirements %}
+        <li>
+        {{ requirement }}
+        </li>
+      {% endfor %}
+      </ul>
+    </div>
+    <h2>Instalation:</h2>
+    {{ project.instalation }}
+    <div class="project-howto">
+      <h2>How to use:</h2>
+      {{ project.howto }}
+    <div>
+  </article>
 {% endfor %}
 </div>
