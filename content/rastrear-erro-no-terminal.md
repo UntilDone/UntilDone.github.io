@@ -12,7 +12,7 @@ paginate_by = 5
 
 Estou na linha de comando quando me deparo com uma mensagem de erro. Mas infelizmente não existe referência para o arquivo de origem nesta mensagem. E o que encontrei na internet foram artigos bem genéricos sobre o problema, e agora? Neste artigo compartilho alguns comandos que utilizei pra resolver este impasse. Segue abaixo a mensagem:
 
-``` 
+```bash
 bash: eval: linha 335: encontrado EOF inesperado enquanto procurava por `'' correspondente
 bash: eval: linha 336: erro de sintaxe: fim prematuro do arquivo
 ```
@@ -47,13 +47,11 @@ $ wc -l .bashrc .bash_it/bash_it.sh /usr/local/bin/funcoeszz
 ```
 
 Mais de 20 mil linhas. Então é sim possível que a mensagem de erro esteja em algum lugar entre elas. Mas são muitas linhas, e agora? Será que existe alguma forma de rastrear o processo de execução desse arquivo? A resposta é sim. Existe uma forma de coletar os passos de execução de um script linha por linha com uma opção do bash:  
-```bash -x .nomedoscript.sh```
+`bash -x .nomedoscript.sh`
 
 Quando executei esse comando aqui. me retornou um monte de linhas no prompt. Para facilitar a vida, é possível redirecionar essa saída para outro arquivo. Vamos fazer isso com:
 
-```bash
-bash -x .bashrc 2> log
-```
+`bash -x .bashrc 2> log`
 
 Aqui nós redirecionamos as mensagens de erro para um novo arquivo chamado _log_. Agora é só buscarmos dentro desse arquivo aquilo que estiver em torno das linhas citadas lá no inicio. Vamos testar:
 
@@ -75,10 +73,9 @@ $ cat -n log | head -338 | tail -15
    336	+++ [[ '' -ge 3 ]]
    337	+++ return 0
    338	+++ source /home/romulo/.bash_it/enabled/150---fuck.aliases.bash
-
 ```
 > **Cat** com a opção **-n** enumera tudo que estiver em **log** linha por linha. E com um _pipe_ ``` | ``` podemos redirecionar a saída do **cat** para o **head** que nos retorna apenas as primeiras linhas que estiverem seguidas do hífen ```-338```. Com mais um **pipe** redirecionamos tudo que for retornado até agora para o **tail** que nos retorna apenas as últimas linhas também definidas com um hífen ```-15```.
 
-De acordo com esse trecho, dá pra ver que meu problema está relacionado com uma condição que faz uma avaliação numérica com uma string vazia ```[[ '' -ge 3 ]]```. Também podemos observar que o trecho do código está relacionado com um plugin chamado BASH_IT. 
+De acordo com esse trecho, dá pra ver que meu problema está relacionado com uma condição que faz uma avaliação numérica com uma string vazia `[[ '' -ge 3 ]]`. Também podemos observar que o trecho do código está relacionado com um plugin chamado _BASH_IT_. 
 
 Depois de desinstalar o plugin meu terminal voltou ao normal. E aprendi que o bash já está cheio de recursos que nos ajudam a resolver nossos problemas no terminal. Basta dar uma olhada no manual do Bash. 
