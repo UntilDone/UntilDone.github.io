@@ -2,7 +2,7 @@
 theme = "dinkleberg"
 
 # The URL the site will be built for
-base_url = "https://pinheirocosta.github.io"
+base_url = "blog/"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
