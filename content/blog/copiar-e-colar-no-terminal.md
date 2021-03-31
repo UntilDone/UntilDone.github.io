@@ -16,7 +16,7 @@ paginate_by = 5
 ### **Copiar e colar com alias**.
 
 Mas e se precisarmos copiar um documento inteiro, ou colar o conteúdo de algum arquivo diretamente em outro? Usar os atalhos do gnome seria cansativo e repetitivo, especialmente se precisarmos copiar e colar com certa frequência. Nessa horas um alias pode ajudar. E para criar um no bash é muito simples, basta adicionar uma linha no arquivo _.bashrc_ que fica localizado na pasta raiz do usuário com a seguinte sintaxe:
-```ruby
+```
 alias nome_do_alias="comando-a-ser-executado"
 ```
 A declaração de um alias começa com a palavra chave reservada _alias_ seguida do nome que você escolher para esse alias, o sinal de igual ```=``` e por fim o comando desejado escrito dentro de aspas. Cada alias precisa ser declarado em uma nova linha.
@@ -30,12 +30,12 @@ A declaração de um alias começa com a palavra chave reservada _alias_ seguida
 A ferramenta _xclip_ é fácil de usar se encaixa bem pra essa tarefa. Vamos criar logo um alias para copiar e outro para colar, que mais abaixo deixo uma explicação de como eles funcionam.
 
 **Copiar**
-```ruby
+```
 alias xcopy="xclip -selection clipboard"
 ```
 
 **Colar**
-```ruby
+```
 alias xpaste="xclip -selection clipboard -o"
 ```
 
@@ -43,23 +43,23 @@ _xclip_ é o comando principal que vai copiar ou colar algum conteúdo pra gente
 
 Agora experimente copiar com:
 
-```ruby
-xcopy nome_do_arquivo
+```
+$ xcopy nome_do_arquivo
 ```
 
 e colar com:
-```ruby
-xpaste
+```
+$ xpaste
 ```
 
 Eles também aceitam redirecionamento!
 
-```ruby
-man xclip | xcopy
+```
+$ man xclip | xcopy
 ```
 
-```ruby
-xpaste > manual.txt
+```
+$ xpaste > manual.txt
 ```
 
 
