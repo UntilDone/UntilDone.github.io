@@ -27,5 +27,9 @@ Welcome to my programming blog. it can be accessed at https://pinheirocosta.gith
 - [x] Create a arrow-down art to show the blog recent posts.
 - [ ] Implement auto translation on posts from pt-br to en-us - [resources](https://matthewlincoln.net/2020/03/01/multilingual-jekyll.html).
 - [x] Create a favicon.
+- [ ] Change the blog main theme pallete.
+- [ ] Include a path to my projects and their docs.
+- [ ] implement the 'hackme' challanges on a static page (can be done?)
+
 
 
