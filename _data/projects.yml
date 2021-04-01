@@ -1,0 +1,30 @@
+- webmtogif:
+  name: 'Webmtogif'
+  description: 'Convert your webm files into gif format'
+  thumbnail: 'https://raw.githubusercontent.com/PinheiroCosta/MyScripts/b7a726aeff1a3447c07d403ec68e519351321699/images/webmtogif.gif'
+  requirements:
+    - 'bash'
+    - 'FFmpeg'
+  instalation: 'Move the script to your /usr/local/bin/ directory.'
+  howto: 'webmtogif <filename.webm>  ex: <code>$ webtogif video.webm</code>'
+
+- colorpick:
+  name: 'Colorpick'
+  description: 'A GUI color picker to use outside the terminal.'
+  requirements:
+    - 'bash'
+    - 'yad'
+    - 'xclip'
+  thumbnail: 'https://github.com/PinheiroCosta/MyScripts/raw/5c1049c3cf5d1747a2ed04c4551da8e16f4de3d4/images/colorpick.gif'
+  instalation: 'move the script file to your /usr/local/bin directory.'
+  howto: 'just type colorpick from the commandline. Once the color is picked, click on the "ok" button. The color hex reference will the automaticaly transfered to the clipboard.'
+
+- sendmail:
+  name: 'Sendmail'
+  description: 'A commandline tool to send emails directly from the terminal.'
+  requirements:
+    - 'bash'
+    - 'Curl'
+  thumbnail: 'https://raw.githubusercontent.com/PinheiroCosta/MyScripts/main/images/sendmail.gif'
+  instalation: 'give execution permission with chmod +x sendmail and then just just run the script <br><code>$ ./sendmail</code>'
+  howto: 'The email must be written inside of a file called mail.txt within the same directory as the script is with the following syntax.<br><br><code style="display:block; white-space:pre-wrap">From: "User Name" <username@gmail.com><br>To: "John Smith" <john@example.com><br>Subject: This is a test message<br><br>Your message goes here.<br>And it can be written with multiple lines.</code>'
