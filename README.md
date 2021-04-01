@@ -4,9 +4,9 @@ Welcome to my programming blog. it can be accessed at https://pinheirocosta.gith
 
 ## Post list
 
-* [Converter webm em gif](https://pinheirocosta.github.io/converter-video-em-gif/)
+* [Converter webm em gif](https://pinheirocosta.github.io/webm-em-gif/)
 * [Copiar e colar no Bash](https://pinheirocosta.github.io/copiar-e-colar-no-terminal/)
-* [Rastrear mensagens de erro no Bash](https://pinheirocosta.github.io/rastrear-mensagens-de-erro-do-terminal/)
+* [Rastrear mensagens de erro no Bash](https://pinheirocosta.github.io/rastrear-erro-no-terminal/)
 <br>
 
 ## Acknowledgments
