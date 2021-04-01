@@ -1,5 +1,5 @@
 <p align="right">
-<img src="https://img.shields.io/github/commits-since/PinheiroCosta/PinheiroCosta.github.io/1.0?logo=github"></img>
+<img src="https://img.shields.io/github/commits-since/PinheiroCosta/PinheiroCosta.github.io/1.0"></img>
 <img src="https://img.shields.io/website?down_color=red&down_message=offline&label=page&logo=github&up_color=green&up_message=online&url=https%3A%2F%2Fpinheirocosta.github.io%2F"</img>
 </p>
 Welcome to my programming blog. it can be accessed at https://pinheirocosta.github.io/
@@ -31,6 +31,4 @@ Welcome to my programming blog. it can be accessed at https://pinheirocosta.gith
 - [ ] Change the blog main theme pallete.
 - [ ] Include a path to my projects and their docs.
 - [ ] implement the 'hackme' challanges on a static page (can be done?)
-
-
 
