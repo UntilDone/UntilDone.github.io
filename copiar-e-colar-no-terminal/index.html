@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Copiar e colar no terminal </title>
+    <link rel="apple-touch-icon" sizes="57x57" href="&#x2F;apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="&#x2F;apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="&#x2F;apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="&#x2F;apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="&#x2F;apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="&#x2F;apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="&#x2F;apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="&#x2F;apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="&#x2F;apple-icon-180x180.png">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="&#x2F;android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="&#x2F;favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="&#x2F;favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="&#x2F;favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" itemprop="about" content="">
+    <meta name="keywords" itemprop="keywords" content="">
+    <meta itemprop="headline" content=""/>
+    <meta itemprop="educationalUse" content="knowledge share" />
+    <meta itemprop="copyrightYear" content="2021" />
+    <meta property="og:title" content=" Copiar e colar no terminal ">
+    <meta property="og:description" content=" Explica como copiar e colar dentro e fora do temrminal. ">
+    <meta property="og:image" content="https:&#x2F;&#x2F;user-images.githubusercontent.com&#x2F;37278803&#x2F;112825055-adf9f880-9061-11eb-9b5c-6542bf4040ce.png">
+    <meta property="og:url" content="&#x2F;copiar-e-colar-no-terminal&#x2F;">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="PinheiroCosta">
+    <meta name="twitter:image:alt" content="Copiar e colar no terminal">
+
+    <meta property="fb:app_id" content="???" />
+    <meta name="twitter:site" content="@???">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Code+Pro">
+    <link rel="stylesheet" href="/site.css">
+</head>
+
+<body>
+    <div 
+     itemscope itemtype="http://schema.org/Organization">
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <a class="title" href="&#x2F;">
+                    <img src="https:&#x2F;&#x2F;user-images.githubusercontent.com&#x2F;37278803&#x2F;112825055-adf9f880-9061-11eb-9b5c-6542bf4040ce.png" alt="">
+                    <h1 >PinheiroCosta</h1>
+            </a>
+        </div>
+    </header>
+
+    <div class="container padding-header">
+        
+<article itemscope itemtype="http://schema.org/BlogPosting" class="post post-page">
+    
+        
+            <meta itemprop="image" content="https:&#x2F;&#x2F;user-images.githubusercontent.com&#x2F;37278803&#x2F;112825055-adf9f880-9061-11eb-9b5c-6542bf4040ce.png">
+        
+    
+    <header>
+        
+        <h1 class="title" itemprop="headline">Copiar e colar no terminal</h1>
+        <address itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Rômulo Pinheiro</span>
+        </address>
+        <div class="extra">
+            
+
+            
+        </div>
+    </header>
+    <div itemprop="articleBody" class="body">
+      <p><code>CTRL</code>+<code>C</code> e <code>CTRL</code>+<code>V</code> são atalhos muito úteis no dia-a-dia. Acontece q se você é usuário da linha de comando, já deve ter percebido que o atalho <code>CTRL</code>+<code>C</code> está associado com a interrupção do processo em andamento.</p>
+<h3 id="copiar-e-colar-com-alias"><strong>Copiar e colar com alias</strong>.</h3>
+<p>Mas e se precisarmos copiar um documento inteiro, ou colar o conteúdo de algum arquivo diretamente em outro? Usar os atalhos do gnome seria cansativo e repetitivo, especialmente se precisarmos copiar e colar com certa frequência. Nessa horas um alias pode ajudar. E para criar um no bash é muito simples, basta adicionar uma linha no arquivo <em>.bashrc</em> que fica localizado na pasta raiz do usuário com a seguinte sintaxe:</p>
+<p><code>alias nome_do_alias=&quot;comando-a-ser-executado&quot;</code></p>
+<p>A declaração de um alias começa com a palavra chave reservada <em>alias</em> seguida do nome que você escolher para esse alias, o sinal de igual <code>=</code> e por fim o comando desejado escrito dentro de aspas. Cada alias precisa ser declarado em uma nova linha.</p>
+<blockquote>
+<p><strong>Atalho do terminal Gnome</strong></p>
+<p>Para copiar o texto selecionado dentro do terminal você também pode utilizar o atalho <code>CTRL</code>+<code>SHIFT</code>+<code>C</code> e colar com <code>CTRL</code>+<code>SHIFT</code>+<code>V</code>.</p>
+</blockquote>
+<h3 id="copiar-e-colar-com-xclip"><strong>Copiar e colar com xclip</strong></h3>
+<p>A ferramenta <em>xclip</em> é fácil de usar se encaixa bem pra essa tarefa. Vamos criar logo um alias para copiar e outro para colar, que mais abaixo deixo uma explicação de como eles funcionam.</p>
+<p><strong>Copiar</strong><br />
+<code>alias xcopy=&quot;xclip -selection clipboard&quot;</code></p>
+<p><strong>Colar</strong><br />
+<code>alias xpaste=&quot;xclip -selection clipboard -o&quot;</code></p>
+<p><em>xclip</em> é o comando principal que vai copiar ou colar algum conteúdo pra gente. A opção <em>-selection</em> vai dizer pra ele <strong>onde</strong> vai realizada essa tarefa, que pode trabalhar com três opções: <em>primary</em>, <em>secondary</em>, e <em>clipboard</em>. O parametro clipboard diz ao <em>xclip</em> que queremos copiar para a <strong>área de transferência</strong> aquilo que for selecionado. E por fim a opção <code>-o</code> que quando adicionada diz  a ele que o que estiver sido selecionado deve ser redirecionado para a <strong>saída</strong> do programa.</p>
+<p>Agora experimente copiar com:</p>
+<p><code>$ xcopy nome_do_arquivo</code></p>
+<p>e colar com:<br />
+<code>$ xpaste</code></p>
+<p>Eles também aceitam redirecionamento!</p>
+<p><code>$ man xclip | xcopy</code></p>
+<p><code>$ xpaste &gt; manual.txt</code></p>
+
+    </div>
+</article>
+
+
+
+    </div>
+</body>
+</html>
