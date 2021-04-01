@@ -18,17 +18,17 @@ A maneira mais conveniente que me veio em mente foi fazer um screencast com a fe
 
 Mas como infelizmente alguns sites não aceitam webm incorporados em suas páginas. Converter pra gif me pareceu ser uma boa opção. Para isso utilizei a ferramenta [FFmpeg](https://ffmpeg.org/). Já tinha ouvido falar dessa ferramenta mas nunca a tinha usado antes. Ela é bastante versátil e me pareceu ser bem completa, capaz de realizar toda sorte de trabalhos com audio e vídeo. 
 
-Depois de ler algumas instruções na página oficial e artigos que encontrei na internet, consegui elaborar um script pra fazer todo trabalho por nós. Você pode encontrar o script no meu reposiório, [clicando aqui](https://github.com/PinheiroCosta/webmtogif). E para usá-lo é simples, basta executar o arquivo *webmtogif* usando o nome do arquivo como parâmetro:
-```shell
-$ bash webmtogif nomedoarquivo.webm
-```
-ou
-```shell
-$ bash webmtogif caminho/do/arquivo/video.webm
-```
+Depois de ler algumas instruções na página oficial e artigos que encontrei na internet, consegui elaborar um script pra fazer todo trabalho por nós. Você pode encontrar o script no meu reposiório, [clicando aqui](https://github.com/PinheiroCosta/webmtogif). E para usá-lo é simples, basta executar o arquivo *webmtogif* usando o nome do arquivo como parâmetro:  
 
-Para facilitar nossa vida, é possível tornar o arquivo executavel e chamá-lo diretamente
-```shell
+`$ bash webmtogif nomedoarquivo.webm`  
+
+ou  
+
+`$ bash webmtogif caminho/do/arquivo/video.webm`  
+
+Para facilitar nossa vida, é possível tornar o arquivo executavel e chamá-lo diretamente  
+
+```bash
 chmod +x webmtogif
 ./webmtogif arquivodevideo.webm
 ```
@@ -37,4 +37,4 @@ O arquivo gif será criado na pasta de onde o script foi executado.
 
 >Certifique-se de instalar a ferramenta ffmpeg antes de usar o script. Ela pode ser encontrada no [site oficial](https://ffmpeg.org/) ou instalada através do seu gerenciador de pacotes.
 
-E o plugin? Ah, depois de reportar o problema, o responsável da ferramenta me lembrou de que nem toda mensagem de erro na tela é um bug. O problema estava na minha máquina. :joy:
+E o plugin? Ah, depois de reportar o problema, o responsável da ferramenta me lembrou de que nem toda mensagem de erro na tela é um bug. O problema estava na minha máquina.
