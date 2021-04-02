@@ -7,7 +7,6 @@ tags = ["Bash", "troubleshooting", "cat", "grep", "wc"]
 
 [extra]
 author = "Rômulo Pinheiro"
-paginate_by = 5
 +++
 
 Estou na linha de comando quando me deparo com uma mensagem de erro. Mas infelizmente não existe referência para o arquivo de origem nesta mensagem. E o que encontrei na internet foram artigos bem genéricos sobre o problema, e agora? Neste artigo compartilho alguns comandos que utilizei pra resolver este impasse. Segue abaixo a mensagem:

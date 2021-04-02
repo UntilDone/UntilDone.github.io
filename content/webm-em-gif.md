@@ -7,7 +7,6 @@ tags = ["bash", "gif", "webm"]
 
 [extra]
 author = "Rômulo Pinheiro"
-paginate_by = 5
 +++
 
 Estava fazendo uns ajustes no blog, quando de repente o plugin da ferramenta do editor de códigos mostrou uma mensagem de erro na tela. Resolvi então fazer uma pausa e reportar o bug no repositório dos desenvolvedores do plugin. Conforme eu preenchia o formulário, percebi que demonstrar o problema com um gif ao invés de várias imagens seria mais eficiente.

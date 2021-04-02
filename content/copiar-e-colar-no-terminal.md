@@ -7,7 +7,6 @@ tags = ["xclip", "alias", "bash"]
 
 [extra]
 author = "Rômulo Pinheiro"
-paginate_by = 5
 +++
 
 `CTRL`+`C` e `CTRL`+`V` são atalhos muito úteis no dia-a-dia. Acontece q se você é usuário da linha de comando, já deve ter percebido que o atalho `CTRL`+`C` está associado com a interrupção do processo em andamento.
