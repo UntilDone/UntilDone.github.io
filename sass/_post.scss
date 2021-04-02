@@ -9,7 +9,7 @@
     }
 
     .category, .description, .extra {
-        color: $color-grey;
+        color: $color-subtitle;
         font-size: 15px;
         line-height: 14px;
         text-decoration: none;
@@ -21,7 +21,7 @@
     }
 
     .title {
-        color: $color-black;
+        color: $color-title;
         font-size: 24px;
         line-height: 20px;
         font-weight: 600;
@@ -42,7 +42,7 @@
         margin: 10px 0 3px;
         font-style: normal;
 
-        & > span { color: $color-black }
+        & > span { color: $color-title }
     }
 }
 
@@ -71,12 +71,15 @@
 
     .body {
         box-sizing: border-box;
-        border-top: 1px solid $color-lgrey;
+        border-top: 1px solid $color-head;
+        border-radius: 5px;
         margin-top: 30px;
+        color: $color-body;
+        background-color: $color-title;
 
         @media screen and (min-width: 900px) {
             border-top: 0px;
-            border-left: 1px solid $color-lgrey;
+            border-left: 1px solid $color-head;
             margin-left: calc(28% + 30px);
             margin-top: 0px;
             padding-left: 30px;
