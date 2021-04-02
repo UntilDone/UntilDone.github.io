@@ -43,12 +43,14 @@ twitter_username = "@???" # OPTIONAL, Twitter User to help with metrics
 
 ## Sidebar automatic links
 sidebar = [
-    {name = "Social", urls=[
+    {name = "Cola comigo", urls=[
         {name="Hackerrank", url="https://www.hackerrank.com/Pinheirocosta"},
         {name="Github", url="https://github.com/PinheiroCosta"},
         {name="Instagram", url="https://www.instagram.com/rompinheiro/"},
     ]},
-    {name = "Divida Conhecimento!", urls=[
-        {name="Contribuir!", url="https://rust-br.github.io/blog/hello-world"}
+    {name = "Projetos", urls=[
+        {name="Colorpick", url=""}
+        {name="Sendmail", url=""}
+        {name="Webmtogif", url=""}
     ]}
 ]
