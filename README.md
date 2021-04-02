@@ -31,4 +31,4 @@ Welcome to my programming blog. it can be accessed at https://pinheirocosta.gith
 - [ ] Change the blog main theme pallete.
 - [ ] Include a path to my projects and their docs.
 - [ ] implement the 'hackme' challanges on a static page (can be done?)
-
+- [ ] Find a way to apply Secure headers on blog - [Content security policy](https://content-security-policy.com/) and [Security check](https://securityheaders.com/)
