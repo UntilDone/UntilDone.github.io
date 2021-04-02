@@ -45,6 +45,7 @@ twitter_username = "@???" # OPTIONAL, Twitter User to help with metrics
 sidebar = [
     {name = "Cola comigo", urls=[
         {name="Hackerrank", url="https://www.hackerrank.com/Pinheirocosta"},
+        {name="CodinGame", url="https://www.codingame.com/profile/25c600759c3b87b73eff5a785b23212a1218773"},
         {name="Github", url="https://github.com/PinheiroCosta"},
         {name="Instagram", url="https://www.instagram.com/rompinheiro/"},
     ]},
