@@ -1,4 +1,9 @@
-Welcome to my programming blog. it can be accessed at https://pinheirocosta.github.io/
+# No longer on development.
+
+This branch holds the previous [jekyll](https://jekyllrb.com/) blog's layout.
+The newest version can be found at [Master](https://github.com/PinheiroCosta/PinheiroCosta.github.io/tree/master) branch which holds the files before the deployment on github-pages.
+check it out what we've got so far at https://pinheirocosta.github.io/
+
 
 <br>
 
