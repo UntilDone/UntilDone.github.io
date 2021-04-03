@@ -2,6 +2,7 @@
 title = "Converter webm em gif"
 date = 2020-12-11
 description = "Explica como converter arquivos com extensão .webm em .gif"
+path = "/blog/converter-webm-em-gif"
 
 [taxonomies]
 categories = ["Tutorial"]
