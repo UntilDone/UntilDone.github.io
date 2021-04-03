@@ -2,13 +2,13 @@
 title = "Converter webm em gif"
 date = 2020-12-11
 description = "Explica como converter arquivos com extensão .webm em .gif"
-thumbnail = "https://upload.wikimedia.org/wikibooks/zh/0/06/Firefox.svg"
 
 [taxonomies]
 categories = ["Tutorial"]
 tags = ["bash", "gif", "webm"]
 
 [extra]
+image = "https://upload.wikimedia.org/wikibooks/zh/0/06/Firefox.svg"
 author = "Rômulo Pinheiro"
 +++
 

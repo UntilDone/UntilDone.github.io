@@ -2,13 +2,13 @@
 title = "Copiar e colar no terminal"
 description = "Explica como copiar e colar dentro e fora do temrminal."
 date = 2021-03-23
-thumbnail = "https://upload.wikimedia.org/wikipedia/commons/5/55/Tux_Enhanced.svg"
 
 [taxonomies]
 categories = ["Tutorial"]
 tags = ["xclip", "alias", "bash"]
 
 [extra]
+image = "https://upload.wikimedia.org/wikipedia/commons/5/55/Tux_Enhanced.svg"
 author = "Rômulo Pinheiro"
 relative_posts = [
 		{label="Converter webm em gif", url="webm-em-gif"},

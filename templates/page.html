@@ -17,6 +17,7 @@
         {% endif %}
     {% endif %}
     <header>
+        <img style="max-width: 100px; align-content: right;" src="{{page.extra.image}}"></img>
         {% if page.taxonomies.categories %}
             <a  class="category" href="{{ get_taxonomy_url(kind="categories", name=page.taxonomies.categories[0]) }}">
                 {{ page.taxonomies.categories[0]  }}

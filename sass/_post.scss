@@ -77,6 +77,11 @@
     .body, header {
         width: 100%;
 
+        img {
+            margin: auto;
+            float: right;
+        }
+
         @media screen and (min-width: 900px) {
             float: left;
         }
@@ -86,7 +91,7 @@
         @media screen and (min-width: 900px) {
             position: fixed;
             width: calc(30% - 35px);
-            max-width: 285px;
+            max-width: 310px;
         }
     }
 
@@ -112,6 +117,11 @@
             max-width: 100%;
             display: block;
             padding: 20px;
+        }
+
+        p {
+            padding: 5px;
+            text-indent: 20px;
         }
 
         p > img {
