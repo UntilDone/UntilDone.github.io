@@ -78,7 +78,6 @@
         width: 100%;
 
         img {
-            margin: auto;
             float: right;
         }
 
@@ -92,7 +91,14 @@
             position: fixed;
             width: calc(30% - 35px);
             max-width: 310px;
+            img {
+            float: left;
+            position: absolute;
+            right: 350px;
+            
+            }
         }
+        
     }
 
     .body {
