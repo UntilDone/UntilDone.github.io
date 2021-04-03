@@ -49,12 +49,12 @@ body {
     padding-top: 75px;
 }
 
-pre {
-    padding: 10px;
-    overflow-x: scroll;
-}
-
 @import 'code';
+
+/// pre {
+///     padding: 10px;
+///     overflow-x: scroll;
+/// }
 
 /// code {
 ///    color: #e74c3c;

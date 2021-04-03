@@ -1,7 +1,18 @@
+pre {
+  padding: 10px;
+  overflow-x: scroll;
+
+}
+
 code {
-  color: #e74c3c;
-  border: 1px solid #ecf0f1;
+
+}
+
+p code {
+  color: $color-font;
+  border: 1px solid $color-body;
+  box-shadow: 1px 0px 1px $color-body;
   padding: 5px;
   border-radius: 5px;
-  background: rgba(236, 240, 241, 0.19);
+  background: $color-body;
 }
