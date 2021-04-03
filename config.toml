@@ -46,8 +46,8 @@ sidebar = [
         {name="Instagram", url="https://www.instagram.com/rompinheiro/"},
     ]},
     {name = "Projetos", urls=[
-        {name="Colorpick", url=""},
-        {name="Sendmail", url=""},
-        {name="Webmtogif", url=""},
+        {name="Colorpick", url="/project/colorpick"},
+        {name="Sendmail", url="/project/sendmail"},
+        {name="Webmtogif", url="/project/webmtogif"},
     ]}
 ]
