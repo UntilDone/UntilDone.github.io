@@ -1,4 +1,4 @@
-base_url = "PinheiroCosta.github.io"
+base_url = "PinheiroCosta.github.io/blog/"
 theme = "dinkleberg"
 
 compile_sass = true
