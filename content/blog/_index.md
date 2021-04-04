@@ -1,4 +1,6 @@
 +++
 paginate_by = 2
-relative_path = "/blog/"
+sort_by = "date"
+template = "index.html"
+page_template = "page.html"
 +++
