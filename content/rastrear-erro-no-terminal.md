@@ -2,7 +2,6 @@
 title = "Rastrear mensagens de erro no Bash"
 description = "Relata como descobriu o comando bash -x e explica como ele pode ser útil."
 date = 2021-03-26
-path = "/blog/rastrear-erros-na-linha-de-comando"
 
 [taxonomies]
 categories = ["Relato"]

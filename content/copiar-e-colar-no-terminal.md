@@ -2,7 +2,6 @@
 title = "Copiar e colar no terminal"
 description = "Explica como copiar e colar dentro e fora do temrminal."
 date = 2021-03-23
-path = "/blog/colar-no-terminal"
 
 [taxonomies]
 categories = ["Tutorial"]
