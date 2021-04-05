@@ -8,8 +8,8 @@ $color-grey: rgba(0,0,0,.54);
 $color-lgrey: rgba(0,0,0,0.20);
 
 // Main colors
-$color-primary: rgba(27, 27, 27, 1);
-$color-secondary: rgba(248, 100, 100, 1);
+$color-primary: rgba(20, 20, 20, 1);
+$color-secondary: rgba(0, 203, 38, 1);
 $color-tertiary: rgba(67, 0, 113, 1);
 
 // Specific colors
@@ -29,6 +29,10 @@ body {
     padding: 0;
     font-family: $font-core;
     background-color: $color-body;
+}
+
+.body {
+    float: left;
 }
 
 .container {
@@ -77,7 +81,7 @@ body {
         text-align: center;
 
         @media screen and (min-width: 900px) {
-            float: left;
+            float: right;
         }
 
         img, h1 {
@@ -99,9 +103,53 @@ body {
     }
 }
 
+.intro {
+    width: 100%;
+    color: $color-font;
+    margin-bottom: 200px;
+
+    h1 {
+        font-size: 50px;
+        margin: 50px 0 0 0;
+    }
+
+    p {
+        font-size: 18px;
+    }
+    
+    span {
+        color: $color-link;
+    }
+    
+    a {
+        color: $color-link;
+    }
+
+    @media screen and (min-width: 900px) {
+        width: 65%;
+        float: top;
+
+        h1 {
+            font-size: 80px;
+        }
+
+     
+    }
+}
 
 .main {
     width: 100%;
+    
+    article { 
+        background-color: scale-color($color-body, $lightness: -20%);
+        box-shadow: inset 1px 1px 5px $color-head;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 0 9px $color-head;
+    }
+    article:hover {
+        background-color: scale-color($color-body, $lightness: -40%);
+    }
 
     @media screen and (min-width: 900px) {
         width: 65%;
@@ -166,3 +214,4 @@ body {
 }
 
 @import "post.scss";
+@import "animation.scss";

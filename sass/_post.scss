@@ -85,19 +85,18 @@
         }
 
         @media screen and (min-width: 900px) {
-            float: left;
+            float: right;
         }
     }
 
     header {
         @media screen and (min-width: 900px) {
-            position: fixed;
-            width: calc(30% - 35px);
+            position: relative;
+            width: calc(30%);
             max-width: 310px;
+            margin-left: 10px;
             img {
-            float: left;
-            position: absolute;
-            right: 350px;
+            float: right;
             
             }
         }
@@ -115,7 +114,6 @@
         @media screen and (min-width: 900px) {
             border-top: 0px;
             border-left: 1px solid $color-head;
-            margin-left: calc(28% + 30px);
             margin-top: 0px;
             padding-left: 30px;
             width: 69%

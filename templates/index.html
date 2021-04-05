@@ -70,6 +70,7 @@
 <body>
     {{- macro::organization(itemprop=false) }}
     <header class="header">
+        
         <div class="container">
             <a class="title" href="{{config.base_url}}">
                 {%- block header_title %}
@@ -83,15 +84,17 @@
             </a>
         </div>
     </header>
-
-    <div class="container padding-header">
+    <div class="container padding-header"> 
         {% block content -%}
-            <main class="main">
+            {% if not paginator.previous %}
+                {% include "intro.html" %}
+            {% endif %}
+            <main id="articles" class="main">
                 {%- for page in paginator.pages -%}
                     {{ macro::post(page=page) }}
                 {%- endfor -%}
                 {{ macro::post_nav(ref=paginator, extra=config.extra) }}
-            </main>
+            </main> 
         {%- endblock content -%}
         {%- block sidebar %}
             <aside class="sidebar">

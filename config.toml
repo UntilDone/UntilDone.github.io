@@ -37,17 +37,6 @@ copyright_year = "2021" # OPTIONAL
 fb_app_id = "???" # OPTIONAL, Facebook App Id to help in metrics
 twitter_username = "@???" # OPTIONAL, Twitter User to help with metrics
 
-## Sidebar automatic links
-sidebar = [
-   {name = "Projetos", urls=[
-        {name="Colorpick", url="/project/colorpick"},
-        {name="Sendmail", url="/project/sendmail"},
-        {name="Webmtogif", url="/project/webmtogif"},
-    ]}, 
-    {name = "Cola comigo", urls=[
-        {name="Hackerrank", url="https://www.hackerrank.com/Pinheirocosta"},
-        {name="CodinGame", url="https://www.codingame.com/profile/25c600759c3b87b73eff5a785b23212a1218773"},
-        {name="Github", url="https://github.com/PinheiroCosta"},
-        {name="Instagram", url="https://www.instagram.com/rompinheiro/"},
-    ]},
-]
+# Sidebar automatic links
+ sidebar = [
+ ]
