@@ -95,9 +95,17 @@
             width: calc(30%);
             max-width: 310px;
             margin-left: 10px;
+            .title {
+                // Center the title above the post
+               // width: 698px;
+               // max-width: 900px;
+               // margin: auto;
+               // text-align: center;
+               // float: none;
+            }
+
             img {
             float: right;
-            
             }
         }
         
@@ -114,7 +122,7 @@
         @media screen and (min-width: 900px) {
             border-top: 0px;
             border-left: 1px solid $color-head;
-            margin-top: 0px;
+            margin-top: 20px;
             padding-left: 30px;
             width: 69%
         }
