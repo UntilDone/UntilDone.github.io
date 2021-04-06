@@ -142,7 +142,6 @@ body {
     
     article { 
         background-color: scale-color($color-body, $lightness: -20%);
-        box-shadow: inset 1px 1px 5px $color-head;
         border-radius: 5px;
         padding: 10px;
         box-shadow: 0 9px $color-head;
