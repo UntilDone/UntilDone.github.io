@@ -141,10 +141,7 @@ body {
     width: 100%;
     
     article { 
-        background-color: scale-color($color-body, $lightness: -20%);
-        border-radius: 5px;
         padding: 10px;
-        box-shadow: 0 9px $color-head;
     }
     article:hover {
         background-color: scale-color($color-body, $lightness: -40%);
