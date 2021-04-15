@@ -73,8 +73,7 @@ body {
     margin-bottom: 20px;
     width: 100%;
     background: $color-head;
-    position: fixed;
-    z-index: 0;
+    position: relative;
 
     .title {
         display: block;
