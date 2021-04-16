@@ -17,22 +17,23 @@ author = "Rômulo Pinheiro"
 +++
 
 
-# Sinopse
+# Introdução
 ```bash
 $ printf format [argument]...
 ```
 
 O comando printf do bash opera de forma parecida com a função printf em C/C++. Ele recebe como primeiro parametro uma string entre aspas duplas "como essa aqui" podendo receber outras variaveis para serem incluídas na string com a ajuda de algumas diretrizes e sequências de escape. Segue abaixo uma lista de exemplos.  
 
-# sequencia de escape
+# Sequência de escape
 |caracter|uso|
 |:---:|:---|
-|\n| nova linha|
-|\t| tabulação|
-|\\| contrabarra|
-|\%| símbolo de porcentagem|
+|\b | backspace|
+|\n | nova linha|
+|\t | tabulação|
+|\\\ | contrabarra|
+|\\% | símbolo de porcentagem|
 
-# strings
+# Strings
 ```bash 
 $ printf "Resolva a equação:  2 + 2.5 = X"  
 ```
@@ -44,7 +45,7 @@ $ printf "Resolva a equação:  2 + 2.5 = X\n"
 ```
 <img src=/images/printf-output2.png></img>
 
-## substituição
+## Substituição
 ```bash
 $ printf "Resolva a %s:  2 + 2.5 = X\n" "equação"
 
@@ -52,7 +53,7 @@ $ printf "Resolva a %s:  2 + 2.5 = X\n" "equação"
 >Note a diretriz de string _%s_ que será substituída pela string informada
 <img src=/images/printf-output3.png></img>
 
-## tipos diferentes de variáveis
+## Tipos de variáveis
 ```bash
 $ printf "Resolva a equação:  %d + %f = X\n" $inteiro $decimal	
 ```
@@ -60,22 +61,22 @@ $ printf "Resolva a equação:  %d + %f = X\n" $inteiro $decimal
 
 >Talvez você tenha que adicionar esta variavel de ambiente no seu bash para que sejam impressos corretamente os pontos flutuantes L_C_NUMERIC=en_US.UTF-8_
 
-## alinhamento à direita
+## Alinhamento à direita
 ```bash
 $ printf "Resolva a equação: |%15s + %15s = %s|\n" "dezesseis" "um" "dezessete"
 
 ```
 <img src=/images/printf-output5.png></img>
 	
-## alinhamento à esquerda
+## Alinhamento à esquerda
 ```bash
 $ printf "Resolva a equação: |%-15s + %-15s = %s|\n" "dezesseis" "um" "dezessete"
 ```
 <img src=/images/printf-output6.png></img>
 
-# números inteiros
+# Números inteiros
 
-# números decimais
+# Números decimais
 ```bash
 $ printf "Resolva a equação:  R$%.2f + R$%.2f = R$ X\n" $decimal1 $decimal2
 ```
