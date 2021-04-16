@@ -39,6 +39,7 @@
     .table-of-contents {
         .title {
             margin-top: 30px;
+
         }
         ul {
             list-style-type: upper-roman;
@@ -90,22 +91,29 @@
     }
 
     header {
+        .title {
+            text-align: center;
+            margin: 40px 0 40px 0;
+        }
+        .table-of-contents, .extra {
+            display: none;
+        }
+
         @media screen and (min-width: 900px) {
             position: relative;
             width: calc(30%);
             max-width: 310px;
             margin-left: 10px;
-            .title {
-                // Center the title above the post
-               // width: 698px;
-               // max-width: 900px;
-               // margin: auto;
-               // text-align: center;
-               // float: none;
-            }
+            display: inherit;
 
             img {
-            float: right;
+                float: right;
+            }
+            .table-of-contents, .extra {
+                display: inherit;
+            }
+            .title {
+                text-align: left;
             }
         }
         
