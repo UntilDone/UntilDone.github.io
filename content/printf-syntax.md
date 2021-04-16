@@ -15,7 +15,7 @@ author = "Rômulo Pinheiro"
 +++
 
 
-# Sinopse:
+# Sinopse
 ```bash
 $ printf format [argument]...
 ```
@@ -40,7 +40,7 @@ $ printf "Resolva a equação:  2 + 2.5 = X"
 $ printf "Resolva a equação:  2 + 2.5 = X\n"
 
 ```
-![png2](/images/printf-output2.png)
+<img src=/images/printf-output2.png></img>
 
 ## substituição
 ```bash
@@ -48,13 +48,13 @@ $ printf "Resolva a %s:  2 + 2.5 = X\n" "equação"
 
 ```
 >Note a diretriz de string _%s_ que será substituída pela string informada
-![png3]("images/printf-output3.png")
+<img src=/images/printf-output3.png></img>
 
 ## tipos diferentes de variáveis
 ```bash
 $ printf "Resolva a equação:  %d + %f = X\n" $inteiro $decimal	
 ```
-![png4]("images/printf-output4.png")
+<img src=/images/printf-output4.png></img>
 
 >Talvez você tenha que adicionar esta variavel de ambiente no seu bash para que sejam impressos corretamente os pontos flutuantes L_C_NUMERIC=en_US.UTF-8_
 
@@ -63,18 +63,19 @@ $ printf "Resolva a equação:  %d + %f = X\n" $inteiro $decimal
 $ printf "Resolva a equação: |%15s + %15s = %s|\n" "dezesseis" "um" "dezessete"
 
 ```
-![png6]("images/printf-output6.png")
+<img src=/images/printf-output5.png></img>
 	
 ## alinhamento à esquerda
 ```bash
 $ printf "Resolva a equação: |%-15s + %-15s = %s|\n" "dezesseis" "um" "dezessete"
 ```
- 
+<img src=/images/printf-output6.png></img>
+
 # números inteiros
 
 # números decimais
 ```bash
 $ printf "Resolva a equação:  R$%.2f + R$%.2f = R$ X\n" $decimal1 $decimal2
 ```
-![png5]("images/printf-output5.png")
+<img src=/images/printf-output7.png></img>
 
