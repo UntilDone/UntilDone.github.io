@@ -1,7 +1,9 @@
 +++
 title = "Printf no bash"
 date = 2021-04-14
+updated = 2021-04-16
 description = "Demonstra a sintaxe do commando printf"
+draft = false
 
 [taxonomies]
 categories = ["Tutorial"]
