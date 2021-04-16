@@ -163,6 +163,18 @@
         a {
             color: $color-link;
         }
+
+        table {
+            background-color: white;
+            margin: auto;
+            width: 100%;
+            thead, tbody {
+
+            th, td {
+                border: 1px solid $color-head;
+            }
+            }
+        }
     }
 
     .relative-posts {
