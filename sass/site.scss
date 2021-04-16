@@ -23,7 +23,9 @@ $color-title: scale-color($color-primary,$lightness: +90%);
 $color-subtitle: scale-color($color-primary, $lightness: +50%);
 
 
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
     padding: 0;
@@ -139,12 +141,19 @@ body {
 
 .main {
     width: 100%;
-    
+    max-width: 1032px;
     article { 
         padding: 10px;
+        border-radius: 10px;
     }
     article:hover {
         background-color: scale-color($color-body, $lightness: -40%);
+        animation: darken 0.25s;
+    }
+    @keyframes darken {
+        0% {background-color: $color-body;}
+        99% {border: 1px $color-body inset;}
+        100% {background-color: scale-color($color-body, $lightness: -40%)}
     }
 
     @media screen and (min-width: 900px) {
