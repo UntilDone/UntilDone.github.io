@@ -27,24 +27,24 @@ O comando printf do bash opera de forma parecida com a função printf em C/C++.
 # Sequência de escape
 |Escape|Uso|
 |:---:|:---|
-|\\" | aspas duplas|
-|\\\ | contrabarra|
-|\a | alerta|
-|\b | backspace|
-|\c | não produz output a mais|
-|\e | esc|
-|\f | campo de formulário|
-|\n | nova linha|
-|\r | enter|
-|\t | tabulação horizontal|
-|\v | tabulação vertical|
-|\NNN | byte com valor octal (1 a 3 digitos)
-|\xHH | byte com valor hexadecimal HH (1 a 2 digitos)
-|\uHHHH | caractere unicode (ISO/IEC 10646) hexadecimal HHHH (4 digitos)
-|\UHHHHHHHH | caractere unicode com valor hexdecimal (8 digitos)
-|\%\% | um único símbolo de porcentagem|
-|\%b | argumento string que contenha sequencias de escape|
-|\%q | argumento é imprimido em formato que pode ser reusado como input do shell com a sintaxe $''
+|__\\"__ | aspas duplas|
+|__\ \\__ | contrabarra|
+|__\a__ | alerta|
+|__\b__ | backspace|
+|__\c__ | não produz output a mais|
+|__\e__ | esc|
+|__\f__ | campo de formulário|
+|__\n__ | nova linha|
+|__\r__ | enter|
+|__\t__ | tabulação horizontal|
+|__\v__ | tabulação vertical|
+|__\NNN__ | byte com valor octal (1 a 3 digitos)
+|__\xHH__ | byte com valor hexadecimal HH (1 a 2 digitos)
+|__\uHHHH__ | caractere unicode (ISO/IEC 10646) hexadecimal HHHH (4 digitos)
+|__\UHHHHHHHH__ | caractere unicode com valor hexdecimal (8 digitos)
+|__\%\%__ | um único símbolo de porcentagem|
+|__\%b__ | argumento string que contenha sequencias de escape|
+|__\%q__ | argumento é imprimido em formato que pode ser reusado como input do shell com a sintaxe $''
 
 # Strings
 A forma mais direta de se usar o "print formated" é chamando o comando seguido de uma string entre aspas duplas. Assim ele vai imprimir na tela exatamente o que for pedido. Também é possível colocar uma string dentro de outra com ajuda do caractere de conversão para strings __%s__, tente aí no seu terminal e veja o que acontece.  
