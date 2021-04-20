@@ -172,9 +172,16 @@
 
             th, td {
                 border: 1px solid $color-head;
+                padding: 0 10px;
+
+            }
+            th {
+                background-color: $color-body;
+                color: white;
             }
             }
         }
+        tr:nth-child(even) {background-color: scale-color($color-head, $lightness: +20%);}
     }
 
     .relative-posts {
