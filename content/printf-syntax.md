@@ -54,7 +54,7 @@ $ printf "O rato roeu a roupa do %s" "rei de roma."
 
 <img src=/images/printf-output1.png title="Em nenhum momento pedimos ao printf que imprimisse uma nova linha"></img>
 
-Ele imprimiu a frase no terminal sem quebra de linha (nova linha). Pode não parecer agora, mas isso nos dá mais controle sobre o comportamento desse comando. Vamos consertar isso com uma sequencia de escape para nova linha.
+A frase saiu sem quebra de linha (nova linha). Pode não parecer agora, mas isso nos dá mais controle sobre o comportamento desse comando. Podemos consertar isso com uma sequencia de escape para nova linha.
 
 <img src=/images/printf-output2.png title="uma string com uma quebra de linha no último caractere"></img>
 
