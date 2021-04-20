@@ -9,7 +9,7 @@ tags = ["Bash", "troubleshooting", "cat", "grep", "wc"]
 
 [extra]
 image = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Bash_Logo_Colored.svg/512px-Bash_Logo_Colored.svg.png"
-author = "Rômulo Pinheiro"
+author = "Rômulo"
 +++
 
 Estou na linha de comando quando me deparo com uma mensagem de erro. Mas infelizmente não existe referência para o arquivo de origem nesta mensagem. E o que encontrei na internet foram artigos bem genéricos sobre o problema, e agora? Neste artigo compartilho alguns comandos que utilizei pra resolver este impasse. Segue abaixo a mensagem:

@@ -9,7 +9,7 @@ tags = ["xclip", "alias", "bash"]
 
 [extra]
 image = "https://upload.wikimedia.org/wikipedia/commons/5/55/Tux_Enhanced.svg"
-author = "Rômulo Pinheiro"
+author = "Rômulo"
 relative_posts = [
 		{label="Converter webm em gif", url="webm-em-gif"},
 ]

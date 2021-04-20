@@ -2,7 +2,7 @@
 title = "Printf no bash"
 date = 2021-04-14
 updated = 2021-04-16
-description = "Demonstra a sintaxe do commando printf"
+description = "Demonstração do commando printf"
 draft = false
 
 [taxonomies]
@@ -11,7 +11,7 @@ tags = ["bash", "printf"]
 
 [extra]
 image = "https://upload.wikimedia.org/wikibooks/zh/0/06/Firefox.svg"
-author = "Rômulo Pinheiro"
+author = "Rômulo"
 
 
 +++
@@ -95,9 +95,9 @@ $ printf "Olá, %s! \n" Rômulo Pinheiro Costa
 ```bash
 $ printf "Resolva a equação:  %d + %f = X\n" $inteiro $decimal	
 ```
-<img src=/images/printf-output4.png></img>
-
->Talvez você tenha que adicionar esta variavel de ambiente no seu bash para que sejam impressos corretamente os pontos flutuantes L_C_NUMERIC=en_US.UTF-8_
+<img src=/images/printf-output4.png></img>  
+  
+Talvez você tenha que adicionar esta variavel de ambiente no seu bash para que sejam impressos corretamente os pontos flutuantes L_C_NUMERIC=en_US.UTF-8_  
 
 ## Alinhamento à direita
 ```bash
