@@ -16,23 +16,23 @@ author = "Rômulo"
 
 # Introdução
 
-Vamos usar como referência a escala de temperamento igual, onde a afinação tem como base o Lá na quarta oitava que vibra na frequência de 440 Hz (A4 = 440.00). Isso significa que se tocarmos esse Lá no violão, a corda vibrará 440 vezes por segundo.
+Vamos usar como referência a escala de temperamento igual, onde a afinação tem como base o Lá na quarta oitava que vibra na frequência de 440 Hz `A4 = 440.00`. Isso significa que se tocarmos esse Lá no violão, a corda vibrará 440 vezes por segundo.
 
 Se multiplicarmos essa frequência por 2, vamos encontrar o A5 = 880.00. Que nada mais é que oito notas (uma oitava) da escala maior acima do lá mencionado. Entre essas oitavas existem 12 notas com intervalos de semitons entre elas. Na música isso é chamado de escala cromática.
 
 > note que existe diferença entre escala maior e escala cromática
 
 Em uma escala cromática de dó ascendente por exemplo, encontramos as seguintes notas:  
-C - C# - D - D# - E - F - F# - G - G# - A - A# - B
+`C - C# - D - D# - E - F - F# - G - G# - A - A# - B`
 
 Para encontrarmos a frequência da nota acima do A4 podemos usar a fórmula:  
-A#4 = A4 * 2<sup>1/12</sup>  
+A#4 = A4 * 2<sup>1/12</sup>
 
 A mesma lógica pode ser aplicada para encontrarmos notas abaixo do A4:  
 F = A4 * 2<sup>-4/12</sup> (onde F é 4 semitons abaixo de A4)
 
 # Limites da audição humana
-O ouvido humano é capaz de captar frequências de som entre 16 e 20.000 (hz). Como a nota mais baixa que conseguimos ouvir é o C0 = 16(hz), podemos utilizá-lo na nossa fórmula para encontrar a tonalidade de uma determinada frequência. Uma tabela com as frequências sonoras pode ser encontrada em [https://pages.mtu.edu/~suits/notefreqs.html](https://pages.mtu.edu/~suits/notefreqs.html)
+O ouvido humano é capaz de captar frequências de som entre 16 e 20.000 (hz). Como a nota mais baixa que conseguimos ouvir é o `C0 = 16(hz)`, podemos utilizá-lo na nossa fórmula para encontrar a tonalidade de uma determinada frequência. Uma tabela com as frequências sonoras pode ser encontrada em [https://pages.mtu.edu/~suits/notefreqs.html](https://pages.mtu.edu/~suits/notefreqs.html)
 
 # Matemática
 
@@ -84,4 +84,5 @@ int tom(double frequencia)
 ```
 O tom A4 possui sua propria variável para caso você precise modificar o código para uma afinação diferente.
 
-Crédito do trecho em python: [https://www.johndcook.com/blog/2016/02/10/musical-pitch-notation/](https://www.johndcook.com/blog/2016/02/10/musical-pitch-notation/)
+Crédito do trecho em python: [https://www.johndcook.com/blog/2016/02/10/musical-pitch-notation/](https://www.johndcook.com/blog/2016/02/10/musical-pitch-notation/
+
