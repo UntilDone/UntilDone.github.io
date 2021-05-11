@@ -53,9 +53,9 @@ C0 = A4*pow(2, -4-9/12)
 sigla = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
 
 def tom(frequencia):
-    semiton = round(12*log2(frequencia/C0))
-    oitava = semiton // 12
-    nota = semiton % 12
+    semitom = round(12*log2(frequencia/C0))
+    oitava = semitom // 12
+    nota = semitom % 12
     return f"{sigla[nota]}{str(oitava)}"
 
 ```
@@ -84,5 +84,5 @@ int tom(double frequencia)
 ```
 O tom A4 possui sua propria variável para caso você precise modificar o código para uma afinação diferente.
 
-Crédito do trecho em python: [https://www.johndcook.com/blog/2016/02/10/musical-pitch-notation/](https://www.johndcook.com/blog/2016/02/10/musical-pitch-notation/
+Crédito do trecho em python: [https://www.johndcook.com/blog/2016/02/10/musical-pitch-notation/](https://www.johndcook.com/blog/2016/02/10/musical-pitch-notation/)
 
