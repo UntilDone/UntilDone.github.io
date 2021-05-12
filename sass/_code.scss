@@ -1,0 +1,41 @@
+pre {
+  padding: 10px;
+  overflow-x: scroll;
+
+}
+
+code {
+
+}
+
+p code {
+  color: $color-font;
+  border: 1px solid $color-body;
+  box-shadow: 1px 0px 1px $color-body;
+  padding: 5px;
+  border-radius: 5px;
+  background: $color-body;
+}
+
+blockquote {
+     background-image: linear-gradient(to bottom, #4e005e 0%, darken(#4e005e, 10%) 100%);
+     border-radius: 50%;
+     border-top: 0;
+     border-left: 0;
+     border-color: $color-body;
+     border-radius: 5px 0px 0px 5px;
+     border-style: inset;
+     box-shadow: 3px 3px 3px $color-body;
+     font-style: italic;
+     margin: 20px 20px 20px 35px;
+     padding: 1.5% 5% 1% 5%;
+     width: 90%;
+     .quote-author {
+       font-size: medium;
+       text-align: right;
+     }
+     p {
+       text-indent: 0;
+       color: white;
+     }
+}

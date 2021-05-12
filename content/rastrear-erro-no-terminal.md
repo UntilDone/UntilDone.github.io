@@ -2,12 +2,14 @@
 title = "Rastrear mensagens de erro no Bash"
 description = "Relata como descobriu o comando bash -x e explica como ele pode ser útil."
 date = 2021-03-26
-thumbnail = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Bash_Logo_Colored.svg/512px-Bash_Logo_Colored.svg.png"
+
+[taxonomies]
+categories = ["Relato"]
 tags = ["Bash", "troubleshooting", "cat", "grep", "wc"]
 
 [extra]
-author = "Rômulo Pinheiro"
-paginate_by = 5
+image = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Bash_Logo_Colored.svg/512px-Bash_Logo_Colored.svg.png"
+author = "Rômulo"
 +++
 
 Estou na linha de comando quando me deparo com uma mensagem de erro. Mas infelizmente não existe referência para o arquivo de origem nesta mensagem. E o que encontrei na internet foram artigos bem genéricos sobre o problema, e agora? Neste artigo compartilho alguns comandos que utilizei pra resolver este impasse. Segue abaixo a mensagem:

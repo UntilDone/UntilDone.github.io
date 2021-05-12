@@ -1,0 +1,248 @@
+@use "sass:color";
+
+$font-core: 'Open Sans', sans-serif;
+$font-alt: 'Source Code Pro', monospace;
+
+$color-black: rgba(0,0,0,.84);
+$color-grey: rgba(0,0,0,.54);
+$color-lgrey: rgba(0,0,0,0.20);
+
+// Main colors
+$color-primary: rgba(20, 20, 20, 1);
+$color-secondary: rgba(0, 203, 38, 1);
+$color-tertiary: rgba(67, 0, 113, 1);
+
+// Specific colors
+
+$color-link: $color-secondary;
+$color-head: scale-color($color-primary, $lightness: +20%);
+$color-body: $color-primary;
+
+$color-font: scale-color($color-primary, $lightness: +80%);
+$color-title: scale-color($color-primary,$lightness: +90%);
+$color-subtitle: scale-color($color-primary, $lightness: +50%);
+
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font-core;
+    background-color: $color-body;
+}
+
+.body {
+    float: left;
+}
+
+.container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1032px;
+    padding: 10px;
+    margin: 0 auto;
+
+    &:after {
+        content: " ";
+        display: block;
+        clear: both;
+    }
+}
+
+.padding-header {
+    padding-top: 25px;
+}
+
+@import 'code';
+
+/// pre {
+///     padding: 10px;
+///     overflow-x: scroll;
+/// }
+
+/// code {
+///    color: #e74c3c;
+///    border: 1px solid #ecf0f1;
+///    padding: 5px;
+///    border-radius: 5px;
+///    background: rgba(236, 240, 241, 0.19);
+///}
+///
+.header {
+    border-bottom: 1px solid $color-title;
+    margin-bottom: 20px;
+    width: 100%;
+    background: $color-head;
+    position: relative;
+    
+    .navigation {
+        display: inline-block;
+        ul {
+            list-style-type: none;
+            margin: 0;
+        }   
+        & > ul > li {
+            display: inline;
+            font-size: 20px;
+        }
+        & > ul > li:first-child {
+            margin-left: -1.5em;
+        }
+        & > ul > li:not(:first-child) {
+            margin-left: 2em
+        }
+        & > ul > li > a {
+            text-decoration: none;
+            color: $color-title;
+        }
+        & > ul > li > a:hover {
+            border-bottom: 3px solid $color-link;
+            box-shadow: inset 0 -4px 0 $color-link, inset 0 -5.5px 0 $color-link;
+        }
+        
+    }
+    .title {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+
+        @media screen and (min-width: 900px) {
+            float: right;
+        }
+
+        img, h1 {
+            vertical-align: top;
+            display: inline-block;
+        }
+
+        h1 {
+            font-family: $font-alt;
+            color: $color-title;
+            font-size: 30px;
+            margin: 0;
+        }
+
+        img {
+            height: 25px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.intro {
+    width: 100%;
+    color: $color-font;
+    margin-bottom: 200px;
+
+    h1 {
+        font-size: 50px;
+        margin: 80px 0 0 0;
+    }
+
+    p {
+        font-size: 18px;
+    }
+    
+    span {
+        color: $color-link;
+    }
+    
+    a {
+        color: $color-link;
+    }
+
+    @media screen and (min-width: 900px) {
+        width: 65%;
+        float: top;
+
+        h1 {
+            font-size: 80px;
+        }
+
+     
+    }
+}
+
+.main {
+    width: 100%;
+    max-width: 1032px;
+    article { 
+        padding: 10px;
+        border-radius: 10px;
+    }
+    article:hover {
+        background-color: scale-color($color-body, $lightness: -40%);
+        animation: darken 0.25s;
+    }
+    @keyframes darken {
+        0% {background-color: $color-body;}
+        99% {border: 1px $color-body inset;}
+        100% {background-color: scale-color($color-body, $lightness: -40%)}
+    }
+
+    @media screen and (min-width: 900px) {
+        width: 65%;
+        float: left;
+    }
+}
+
+.sidebar {
+    width: 100%;
+    display: none;
+
+    @media screen and (min-width: 900px) {
+        width: 35%;
+        float: left;
+        display: block;
+    }
+
+    h3 {
+        margin: 0 0 5px;
+        padding: 0 5px 5px;
+        color: $color-title;
+        border-bottom: 1px solid $color-head;
+    }
+}
+
+.base-list {
+    list-style: none;
+    padding: 0 15px;
+
+    & > li > a {
+        text-decoration: none;
+        color: $color-link;
+        line-height: 1.8;
+    }
+}
+
+.page-title {
+    margin: 0 0 30px;
+    font-size: 26px;
+    color: $color-font;
+}
+
+.page-navigator {
+    margin-bottom: 15px;
+    text-align: center;
+
+    & > span, & > a {
+        color: $color-link;
+        font-size: 12px;
+    }
+
+    & > .pages {
+        color: $color-font;
+        font-size: 15px;
+        margin: 0 10px;
+    }
+
+    & > a {
+        color: $color-link;
+        text-decoration: none;
+    }
+}
+
+@import "post.scss";
+@import "animation.scss";

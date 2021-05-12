@@ -2,12 +2,17 @@
 title = "Copiar e colar no terminal"
 description = "Explica como copiar e colar dentro e fora do temrminal."
 date = 2021-03-23
-thumbnail = "https://upload.wikimedia.org/wikipedia/commons/5/55/Tux_Enhanced.svg"
+
+[taxonomies]
+categories = ["Tutorial"]
 tags = ["xclip", "alias", "bash"]
 
 [extra]
-author = "Rômulo Pinheiro"
-paginate_by = 5
+image = "https://upload.wikimedia.org/wikipedia/commons/5/55/Tux_Enhanced.svg"
+author = "Rômulo"
+relative_posts = [
+		{label="Converter webm em gif", url="webm-em-gif"},
+]
 +++
 
 `CTRL`+`C` e `CTRL`+`V` são atalhos muito úteis no dia-a-dia. Acontece q se você é usuário da linha de comando, já deve ter percebido que o atalho `CTRL`+`C` está associado com a interrupção do processo em andamento.

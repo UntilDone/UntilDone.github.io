@@ -1,0 +1,25 @@
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
+}
+
+.arrow {
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  margin: 150px 0 0 -20px;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+.filter-green {
+  filter: invert(48%) sepia(96%) saturate(699%) hue-rotate(88deg) brightness(95%) contrast(107%);
+}
