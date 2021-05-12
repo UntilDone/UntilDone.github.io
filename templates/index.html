@@ -74,9 +74,9 @@
         <div class="container">
             <nav class="navigation">
                 <ul>
-                    <li><a href="#">Home</a>
-                    <li><a href="#">Artigos</a>
-                    <li><a href="#">Ferramentas</a>
+                    <li><a href="{{config.base_url}}">Home</a>
+                        <li><a href="{{config.base_url}}page/2">Artigos</a>
+                            <li><a href="#">Ferramentas</a>
                 <ul/>
             </nav>
             <a class="title" href="{{config.base_url}}">
@@ -91,11 +91,14 @@
             </a>
         </div>
     </header>
+    <section class="welcome">
+        {% if section and not paginator.previous %}
+            {% include "intro.html" %}
+        {% endif %}
+    </section>
+    <section class="posts">
     <div class="container padding-header"> 
         {% block content -%}
-            {% if not paginator.previous %}
-                {% include "intro.html" %}
-            {% endif %}
             <main id="articles" class="main">
                 {%- for page in paginator.pages -%}
                     {{ macro::post(page=page) }}
@@ -118,5 +121,6 @@
             </aside>
         {% endblock sidebar %}
     </div>
+    </section>
 </body>
 </html>
