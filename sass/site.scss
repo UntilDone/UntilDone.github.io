@@ -39,7 +39,7 @@ footer {
     width: 100%;
     color: $color-font;
     .description {
-        width: 50%;
+        width: 40%;
         margin-left: 50%;
     }
     .contato {
@@ -52,8 +52,10 @@ footer {
 
     }
     ul {
+        margin-right: 80px;
         text-align: center;
         list-style-type: none;
+        padding: 20px;
         & > li {
             display: inline;
         }
