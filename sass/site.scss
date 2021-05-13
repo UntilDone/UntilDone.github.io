@@ -17,6 +17,7 @@ $color-tertiary: rgba(67, 0, 113, 1);
 $color-link: $color-secondary;
 $color-head: scale-color($color-primary, $lightness: +8%);
 $color-body: $color-primary;
+$color-section: scale-color($color-body, $lightness: -50%);
 
 $color-font: scale-color($color-primary, $lightness: +80%);
 $color-title: scale-color($color-primary,$lightness: +90%);
@@ -32,8 +33,42 @@ body {
     font-family: $font-core;
     background-color: $color-body;
 }
-section {
-    border-bottom: 1px solid #e8e8e8; 
+footer {
+    background-color: $color-section;
+    display: flow-root;
+    width: 100%;
+    color: $color-font;
+    .description {
+        width: 50%;
+        margin-left: 50%;
+    }
+    .contato {
+        width: 50%;
+        float: left;
+        line-height: 0.5em;
+        text-align: center;
+    }
+    .social_media {
+
+    }
+    ul {
+        text-align: center;
+        list-style-type: none;
+        & > li {
+            display: inline;
+        }
+        & > li:not(:first-child){
+            margin-left: 3em;
+        }
+    }
+    p {
+        @media screen and (min-width: 900px){
+            border-left: 3px solid $color-body;
+            padding: 10px 20px;
+            
+        }
+
+    }
 }
 .posts {
     background-color: $color-body;
@@ -60,20 +95,6 @@ section {
 }
 
 @import 'code';
-
-/// pre {
-///     padding: 10px;
-///     overflow-x: scroll;
-/// }
-
-/// code {
-///    color: #e74c3c;
-///    border: 1px solid #ecf0f1;
-///    padding: 5px;
-///    border-radius: 5px;
-///    background: rgba(236, 240, 241, 0.19);
-///}
-///
 .header {
     width: 100%;
     background: $color-head;
@@ -133,7 +154,7 @@ section {
     }
 }
 .welcome {
-    background-color: scale-color($color-body, $lightness: -50%);
+    background-color: $color-section;
 }
 .intro {
     width: 100%;
