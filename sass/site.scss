@@ -38,20 +38,32 @@ footer {
     display: flow-root;
     width: 100%;
     color: $color-font;
+    font-family: $font-alt;
     .description {
         width: 40%;
         margin-left: 50%;
+        font-size: 14px;
+        @media screen and (min-width: 800px){
+            font-size: unset;
+        }
     }
     .contato {
         width: 50%;
         float: left;
         line-height: 0.5em;
         text-align: center;
+        font-size: 10px;
+        @media screen and (min-width: 800px){
+            font-size: unset;
+        }
     }
     .social_media {
-
+        a{
+            color: black;
+        }
     }
     ul {
+        width: 90%;
         margin-right: 80px;
         text-align: center;
         list-style-type: none;
