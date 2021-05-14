@@ -1,5 +1,5 @@
 +++
-title = "Printf no bash"
+title = "Imprimir no terminal com o comando printf"
 date = 2021-04-14
 updated = 2021-04-16
 description = "Como utilizar o commando printf na linha de comando"
