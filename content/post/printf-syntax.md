@@ -126,3 +126,7 @@ $ printf "Resolva a equação: |%-15s + %-15s = %s|\n" "dezesseis" "um" "dezesse
 ```
 <img src=/images/printf-output6.png></img>
 
+
+Para mais informações sobre o comando _printf_, visite a documentação oficial em: [https://www.gnu.org/software/coreutils/printf](https://www.gnu.org/software/coreutils/printf)  
+Você também pode digitar o seguinte comando diretamente do seu terminal:  
+`info '(coreutils) printf invocation'`
