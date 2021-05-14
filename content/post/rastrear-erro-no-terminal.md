@@ -1,6 +1,6 @@
 +++
 title = "Rastrear mensagens de erro no Bash"
-description = "Relata como descobriu o comando bash -x e explica como ele pode ser útil."
+description = "Como utilizar o parametro -x do comando bash, e sua utilidade na hora de encontrar a origem dos bugs."
 date = 2021-03-26
 
 [taxonomies]

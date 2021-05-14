@@ -2,7 +2,7 @@
 title = "Printf no bash"
 date = 2021-04-14
 updated = 2021-04-16
-description = "Demonstração do commando printf"
+description = "Como utilizar o commando printf na linha de comando"
 draft = false
 
 [taxonomies]
@@ -10,7 +10,7 @@ categories = ["Tutorial"]
 tags = ["bash", "printf"]
 
 [extra]
-image = "https://upload.wikimedia.org/wikibooks/zh/0/06/Firefox.svg"
+image = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Bash_Logo_Colored.svg/512px-Bash_Logo_Colored.svg.png"
 author = "Rômulo"
 
 

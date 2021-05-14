@@ -1,6 +1,6 @@
 +++
 title = "Copiar e colar no terminal"
-description = "Explica como copiar e colar dentro e fora do temrminal."
+description = "Teclas de atalho, Aliases, e script para auxiliar na hora de copiar e colar dentro e fora da linha de comando."
 date = 2021-03-23
 
 [taxonomies]
