@@ -84,6 +84,17 @@ footer {
 
     }
 }
+
+.parallax {
+    background-image: url("/images/circle.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 105%;
+    @media screen and (max-width: 900px) {
+        background-image: none;
+  }
+}
 .posts {
     background-color: $color-body;
 }
@@ -116,6 +127,7 @@ footer {
     border-bottom: 1px solid #e8e8e8; 
     .navigation {
         display: inline-block;
+        margin-bottom: 10px;
         ul {
             list-style-type: none;
             margin: 0;
@@ -174,7 +186,6 @@ footer {
     width: 100%;
     color: $color-font;
     padding: 10px;
-    background-color: inherit;
     h1 {
         font-size: 50px;
         margin: 80px 0 0 0;

@@ -91,11 +91,11 @@
             </a>
         </div>
     </header>
-    <section class="welcome">
         {% if section and not paginator.previous %}
+            <section class="welcome parallax">
             {% include "intro.html" %}
+            </section>
         {% endif %}
-    </section>
     <section class="posts">
     <div class="container padding-header"> 
         {% block content -%}
