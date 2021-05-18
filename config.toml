@@ -1,5 +1,6 @@
 base_url = "/"
 theme = "dinkleberg"
+description = "Blog sobre GNU/Linux, desenvolvimento de software, programação, e software livre. Feito com Zola."
 
 compile_sass = true
 
