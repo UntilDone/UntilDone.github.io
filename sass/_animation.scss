@@ -6,6 +6,10 @@
 	60% {transform: translateY(-15px);}
 }
 
+@keyframes blink {
+  0% {background-color: $color-body;}
+  50% {background-color: $color-font;}
+}
 .arrow {
   position: relative;
   bottom: 0;
@@ -22,4 +26,11 @@
 
 .filter-green {
   filter: invert(48%) sepia(96%) saturate(699%) hue-rotate(88deg) brightness(95%) contrast(107%);
+}
+
+.cursor-blink {
+  animation: blink 1.2s infinite;
+  width: 10px;
+  height: 28px;
+  display: inline-block;
 }

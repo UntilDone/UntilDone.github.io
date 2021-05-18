@@ -2,7 +2,7 @@
 title = "Imprimir no terminal com o comando printf"
 date = 2021-04-14
 updated = 2021-04-16
-description = "Como utilizar o commando printf na linha de comando"
+description = "Aprenda como utilizar o comando printf na linha de comando, com exemplos simples, e tabelas que demonstram os principais recursos que esta ferramenta poderosa oferece."
 draft = false
 
 [taxonomies]

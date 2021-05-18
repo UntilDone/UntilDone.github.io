@@ -1,6 +1,6 @@
 +++
 title = "Copiar e colar no terminal"
-description = "Teclas de atalho, Aliases, e script para auxiliar na hora de copiar e colar dentro e fora da linha de comando."
+description = "Domine as formas de editar documentos de texto com comandos e recursos simples do Linux, utilizando teclas de atalho, aliases, e scripts. Neste artigo você aprenderá diversas formas de copiar e colar texto dentro e fora da linha de comando."
 date = 2021-03-23
 xlclip-doc = ""
 [taxonomies]

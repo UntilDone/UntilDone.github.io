@@ -1,10 +1,10 @@
 +++
 title = "Rastrear mensagens de erro no Bash"
-description = "Como utilizar o parametro -x do comando bash, e sua utilidade na hora de encontrar a origem dos bugs."
+description = "Estou na linha de comando quando me deparo com uma mensagem de erro. Mas infelizmente não existe referência para o arquivo de origem nesta mensagem. E o que encontrei na internet foram artigos bem genéricos sobre o problema, e agora?"
 date = 2021-03-26
 
 [taxonomies]
-categories = ["Relato"]
+categories = ["Relatos"]
 tags = ["Bash", "troubleshooting", "cat", "grep", "wc"]
 
 [extra]

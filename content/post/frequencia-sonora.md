@@ -2,7 +2,7 @@
 title = "Frequência Sonora"
 date = 2021-04-30
 updated = 2021-04-30
-description = "Descubra o tom de uma determinada frequência sonora com Python e C"
+description = "Descubra como encontrar o tom de uma determinada frequência sonora com lógica de programação. Aprenda como implementar um algoritmo que calcula a distancia entre os semitons de uma nota musical à outra usando Python ou a linguagem C."
 draft = false
 
 [taxonomies]
