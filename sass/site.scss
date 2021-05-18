@@ -222,6 +222,9 @@ footer {
     article { 
         padding: 10px;
         border-radius: 10px;
+        span {
+            color: $color-font;
+        }
     }
     article:hover {
         background-color: scale-color($color-body, $lightness: -40%);

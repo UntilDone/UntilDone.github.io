@@ -6,7 +6,7 @@ description = "Como utilizar o commando printf na linha de comando"
 draft = false
 
 [taxonomies]
-categories = ["Tutorial"]
+categories = ["Tutoriais"]
 tags = ["bash", "printf"]
 
 [extra]

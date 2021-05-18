@@ -4,7 +4,7 @@ description = "Teclas de atalho, Aliases, e script para auxiliar na hora de copi
 date = 2021-03-23
 
 [taxonomies]
-categories = ["Tutorial"]
+categories = ["Tutoriais"]
 tags = ["xclip", "alias", "bash"]
 
 [extra]

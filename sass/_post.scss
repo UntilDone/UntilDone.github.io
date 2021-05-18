@@ -3,7 +3,9 @@
     text-decoration: none;
     display: block;
     margin-bottom: 50px;
-
+    a{
+        text-decoration: none;
+    }
     .category, .description, .title {
         display: block;
     }
