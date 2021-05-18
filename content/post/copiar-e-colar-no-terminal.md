@@ -2,7 +2,7 @@
 title = "Copiar e colar no terminal"
 description = "Teclas de atalho, Aliases, e script para auxiliar na hora de copiar e colar dentro e fora da linha de comando."
 date = 2021-03-23
-
+xlclip-doc = ""
 [taxonomies]
 categories = ["Tutoriais"]
 tags = ["xclip", "alias", "bash"]
@@ -20,7 +20,7 @@ relative_posts = [
 
 ### **Copiar e colar com alias**.
 
-Mas e se precisarmos copiar um documento inteiro, ou colar o conteúdo de algum arquivo diretamente em outro? Usar os atalhos do gnome seria cansativo e repetitivo, especialmente se precisarmos copiar e colar com certa frequência. Nessa horas um alias pode ajudar. E para criar um no bash é muito simples, basta adicionar uma linha no arquivo _.bashrc_ que fica localizado na pasta raiz do usuário com a seguinte sintaxe:  
+Mas e se precisarmos copiar um documento inteiro, ou colar o conteúdo de algum arquivo diretamente em outro? Usar os atalhos do gnome seria cansativo e repetitivo, especialmente se precisarmos copiar e colar com certa frequência. Nessa horas um alias pode ajudar. E para criar um no bash é muito simples, basta adicionar uma linha dentro do arquivo _.bashrc_ que fica localizado na pasta raiz do usuário _/home/{nome-do-usuario}/_ com a seguinte sintaxe:  
 
 `alias nome_do_alias="comando-a-ser-executado"`  
 
@@ -32,7 +32,7 @@ A declaração de um alias começa com a palavra chave reservada _alias_ seguida
 
 ### **Copiar e colar com xclip**
 
-A ferramenta _xclip_ é fácil de usar se encaixa bem pra essa tarefa. Vamos criar logo um alias para copiar e outro para colar, que mais abaixo deixo uma explicação de como eles funcionam.
+A ferramenta _xclip_ é fácil de usar se encaixa bem pra essa tarefa. Vamos criar um alias para copiar e outro para colar, e logo em seguida veremos uma explicação de como eles funcionam.
 
 **Copiar**  
 `alias xcopy="xclip -selection clipboard"`  
@@ -40,7 +40,7 @@ A ferramenta _xclip_ é fácil de usar se encaixa bem pra essa tarefa. Vamos cri
 **Colar**  
 `alias xpaste="xclip -selection clipboard -o"`  
 
-_xclip_ é o comando principal que vai copiar ou colar algum conteúdo pra gente. A opção _-selection_ vai dizer pra ele **onde** vai realizada essa tarefa, que pode trabalhar com três opções: _primary_, _secondary_, e _clipboard_. O parametro clipboard diz ao _xclip_ que queremos copiar para a **área de transferência** aquilo que for selecionado. E por fim a opção `-o` que quando adicionada diz  a ele que o que estiver sido selecionado deve ser redirecionado para a **saída** do programa.
+_xclip_ é o comando principal que vai copiar ou colar algum conteúdo pra gente. A opção _-selection_ vai dizer pra ele **onde** vai ser realizada essa tarefa, que pode trabalhar com três opções: _primary_, _secondary_, e _clipboard_. O parametro clipboard diz ao _xclip_ que queremos copiar para a **área de transferência** aquilo que for selecionado. E por fim a opção `-o` que quando adicionada, solicita ao programa que tudo que tiver sido selecionado deve ser redirecionado para a **saída** do programa (nesse caso, impresso na tela).
 
 Agora experimente copiar com:  
 
@@ -55,3 +55,4 @@ Eles também aceitam redirecionamento!
 
 `$ xpaste > manual.txt`  
 
+Agora ficou mais fácil de editar documentos de texto. Para mais informações sobre o comando **xclip** visite a pagina da sua [documentação]({{page.xclip-doc}}) oficial.

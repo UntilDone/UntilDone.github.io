@@ -23,13 +23,13 @@ Se multiplicarmos essa frequência por 2, vamos encontrar o `A5 = 880.00`. Que n
 > note que existe diferença entre escala maior e escala cromática
 
 Em uma escala cromática ascendente começando pelo dó, por exemplo, encontramos as seguintes notas:  
-`C - C# - D - D# - E - F - F# - G - G# - A - A# - B`  
+`C - C# - D - D# - E - F - F# - G - G# - A - A# - B` _(Total de 12 semitons)_
  
 
-Para encontrarmos a frequência da nota acima do A4 podemos usar a fórmula:  
+Para encontrarmos a frequência do semiton acima do A4 podemos usar a fórmula:  
 __A#4 = A4 * 2<sup>1/12</sup>__
 
-A mesma lógica pode ser aplicada para encontrarmos notas abaixo do A4:  
+A mesma lógica pode ser aplicada para encontrarmos semitons abaixo do A4:  
 __F = A4 * 2<sup>-4/12</sup>__ (onde F é 4 semitons abaixo de A4)
 
 # Limites da audição humana

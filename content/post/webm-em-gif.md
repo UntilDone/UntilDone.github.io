@@ -14,9 +14,9 @@ author = "Rômulo"
 
 Estava fazendo uns ajustes no blog, quando de repente o plugin da ferramenta do editor de códigos mostrou uma mensagem de erro na tela. Resolvi então fazer uma pausa e reportar o bug no repositório dos desenvolvedores do plugin. Conforme eu preenchia o formulário, percebi que demonstrar o problema com um gif ao invés de várias imagens seria mais eficiente.
 
-A maneira mais conveniente que me veio em mente foi fazer um screencast com a ferramenta nativa do gnome, que pode ser ativada através do atalho `Ctrl` + `Alt` + `Shift` + `R`. Um círculo vermelho/laranja aparece no canto superior direito do monitor indicando que a tela está sendo gravada. Aí é só apertar `Ctrl` + `Alt` + `Shift` + `R` mais uma vez quando a gravação estiver concluída que a ferramenta joga a gravação no formato .webm direto na pasta 'Vídeos' do nosso sistema. Legal!
+A maneira mais conveniente que me veio em mente foi fazer um screencast com a ferramenta nativa do gnome, que pode ser ativada através do atalho `Ctrl` + `Alt` + `Shift` + `R`. Um círculo vermelho/laranja aparece no canto superior direito do monitor indicando que a tela está sendo gravada. Aí é só apertar `Ctrl` + `Alt` + `Shift` + `R` mais uma vez quando a gravação estiver concluída que a ferramenta joga a gravação no formato .webm direto na pasta 'Vídeos' do nosso sistema. Legal!  
 
-![gif](https://github.com/PinheiroCosta/PinheiroCosta.github.io/raw/master/_images/erro.gif)
+<img src="https://github.com/PinheiroCosta/PinheiroCosta.github.io/raw/master/_images/erro.gif">  
 
 Mas como infelizmente alguns sites não aceitam webm incorporados em suas páginas. Converter pra gif me pareceu ser uma boa opção. Para isso utilizei a ferramenta [FFmpeg](https://ffmpeg.org/). Já tinha ouvido falar dessa ferramenta mas nunca a tinha usado antes. Ela é bastante versátil e me pareceu ser bem completa, capaz de realizar toda sorte de trabalhos com audio e vídeo. 
 

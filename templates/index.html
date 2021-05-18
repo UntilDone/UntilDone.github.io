@@ -75,7 +75,11 @@
             <nav class="navigation">
                 <ul>
                     <li><a href="{{config.base_url}}">Home</a>
-                    <li><a href="{{config.base_url}}page/2">Artigos</a>
+                        {% if not paginator.next %}
+                            <li><a href="{{config.base_url}}">Artigos</a>
+                        {% else %}
+                            <li><a href="{{config.base_url}}page/2">Artigos</a>
+                        {% endif %}
                     <li><a href="https://github.com/PinheiroCosta/MyScripts" target="#_blank">Ferramentas</a>
                 </ul>
             </nav>
