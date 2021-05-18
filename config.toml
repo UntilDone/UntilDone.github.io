@@ -1,7 +1,7 @@
 base_url = "/"
 theme = "dinkleberg"
-description = "Blog sobre GNU/Linux, desenvolvimento de software, programação, e software livre. Feito com Zola."
-title = "Pinheiro Costa's Blog"
+description = "Blog pessoal que contém informações sobre programação, GNU/Linux, desenvolvimento de software, e mais. Feito para quem gosta da linha de comando."
+title = "PinheiroCosta"
 
 compile_sass = true
 
