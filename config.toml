@@ -1,6 +1,7 @@
 base_url = "/"
 theme = "dinkleberg"
 description = "Blog sobre GNU/Linux, desenvolvimento de software, programação, e software livre. Feito com Zola."
+title = "Pinheiro Costa's Blog"
 
 compile_sass = true
 
@@ -30,13 +31,11 @@ label_minutes = "minutos"
 og_image = "https://user-images.githubusercontent.com/37278803/112825055-adf9f880-9061-11eb-9b5c-6542bf4040ce.png" # Image that will appear on social media
 og_alt_image = "Rato" # Alt for og_image
 og_site_name = "PinheiroCosta" # Site Name for Open Graphic
-keywords = "" # Keywords for SEO
+keywords = "Programação, Linux, Python, Desenvolvedor de Software, Programador, Tutorial" # Keywords for SEO
 
 educational_use = "knowledge share" # OPTIONAL
 copyright_year = "2021" # OPTIONAL
 
-fb_app_id = "???" # OPTIONAL, Facebook App Id to help in metrics
-twitter_username = "@???" # OPTIONAL, Twitter User to help with metrics
 
 # Sidebar automatic links
  sidebar = [

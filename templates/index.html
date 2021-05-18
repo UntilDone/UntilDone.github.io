@@ -1,7 +1,7 @@
 {% import "macros.html" as macro %}
 
 <!DOCTYPE html>
-<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<html lang="pt-br" itemscope itemtype="http://schema.org/Blog">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -77,15 +77,15 @@
                     <li><a href="{{config.base_url}}">Home</a>
                     <li><a href="{{config.base_url}}page/2">Artigos</a>
                     <li><a href="https://github.com/PinheiroCosta/MyScripts" target="#_blank">Ferramentas</a>
-                <ul/>
+                </ul>
             </nav>
             <a class="title" href="{{config.base_url}}">
                 {%- block header_title %}
                     {% if config.extra.blog_logo -%}
-                        <img src="{{ config.extra.blog_logo }}" alt="">
+                        <img src="{{ config.extra.blog_logo }}" alt="a spinning rat">
                     {%- endif %}
                     {% if config.extra.blog_title -%}
-                        <h1 >{{config.extra.blog_title}}</h1>
+                        <h2>{{config.extra.blog_title}}</h2>
                     {%- endif -%}
                 {% endblock header_title %}
             </a>
