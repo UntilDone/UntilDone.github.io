@@ -4,7 +4,7 @@ date = 2020-12-11
 description = "Script para a conversão de arquivos com extensão .webm em .gif"
 
 [taxonomies]
-categories = ["Tutorial"]
+categories = ["Tutorial", "Código Aberto"]
 tags = ["bash", "gif", "webm"]
 
 [extra]
