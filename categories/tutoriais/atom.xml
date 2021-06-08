@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>PinheiroCosta - Código Aberto - Tutoriais</title>
+	<subtitle>Blog pessoal que contém informações sobre programação, GNU&#x2F;Linux, desenvolvimento de software, e mais. Feito para quem gosta da linha de comando.</subtitle>
+	<link href="/categories/tutoriais/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="/"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2021-04-16T00:00:00+00:00</updated>
+	<id>/categories/tutoriais/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Imprimir no terminal com o comando printf</title>
+		<published>2021-04-14T00:00:00+00:00</published>
+		<updated>2021-04-16T00:00:00+00:00</updated>
+		<link href="/post/printf-syntax/" type="text/html"/>
+		<id>/post/printf-syntax/</id>
+		<content type="html">&lt;h1 id=&quot;introducao&quot;&gt;Introdução&lt;&#x2F;h1&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;printf&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; format &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;argument&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;...
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;O comando printf do bash opera de forma parecida com a função printf em C&#x2F;C++. Ele recebe como primeiro parametro &lt;em&gt;format&lt;&#x2F;em&gt;, uma string entre aspas duplas &amp;quot;como essa aqui&amp;quot; e pode receber alguns argumentos para auxiliar na formatação, como sequências de escape e referências para variáveis. &lt;&#x2F;p&gt;
+&lt;h1 id=&quot;sequencia-de-escape&quot;&gt;Sequência de escape&lt;&#x2F;h1&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th align=&quot;center&quot;&gt;Escape&lt;&#x2F;th&gt;&lt;th align=&quot;left&quot;&gt;Uso&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;\&amp;quot;&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;aspas duplas&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;\ \&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;contrabarra&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;\a&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;alerta&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;\b&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;backspace&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;\c&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;não produz output a mais&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;\e&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;esc&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;\f&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;campo de formulário&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;\n&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;nova linha&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;\r&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;enter&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;\t&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;tabulação horizontal&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;\v&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;tabulação vertical&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;\NNN&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;byte com valor octal (1 a 3 digitos)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;\xHH&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;byte com valor hexadecimal HH (1 a 2 digitos)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;\uHHHH&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;caractere unicode (ISO&#x2F;IEC 10646) hexadecimal HHHH (4 digitos)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;\UHHHHHHHH&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;caractere unicode com valor hexdecimal (8 digitos)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;%%&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;um único símbolo de porcentagem&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;%b&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;argumento string que contenha sequencias de escape&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;%q&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;argumento é imprimido em formato que pode ser reusado como input do shell com a sintaxe $&#x27;&#x27;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;h1 id=&quot;tipos-de-variaveis&quot;&gt;Tipos de variáveis&lt;&#x2F;h1&gt;
+&lt;p&gt;Tenha em mente que o printf tenta converter para string para todos os argumentos.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; printf &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Olá, %s! \n&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot; Rômulo Pinheiro Costa
+
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;img src=&#x2F;images&#x2F;printf-output3.png title=&quot;Note a diferença quando o parametro é passado com aspas e quando é passado sem elas&quot; alt=&quot;output: Olá, Rômulo!\nOlá, Pinheiro!\nOlá, Costa!\n&quot;&gt;&lt;&#x2F;img&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;strings&quot;&gt;Strings&lt;&#x2F;h2&gt;
+&lt;p&gt;A forma mais direta de se usar o &amp;quot;print formated&amp;quot; é chamando o comando seguido de uma string entre aspas duplas. Assim ele vai imprimir na tela exatamente o que for pedido. Também é possível colocar uma string dentro de outra com ajuda do caractere de conversão para strings &lt;strong&gt;%s&lt;&#x2F;strong&gt;, tente aí no seu terminal e veja o que acontece.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; printf &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;O rato roeu a roupa do %s&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;rei de roma.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;img src=&#x2F;images&#x2F;printf-output1.png title=&quot;Em nenhum momento pedimos ao printf que imprimisse uma nova linha&quot; alt=&quot;A saída do comando foi realizada sem quebra de linha&quot;&gt;&lt;&#x2F;img&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;A frase saiu sem quebra de linha (nova linha). Pode não parecer agora, mas isso nos dá mais controle sobre o comportamento desse comando. Podemos consertar isso com uma sequencia de escape para nova linha.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&#x2F;images&#x2F;printf-output2.png title=&quot;note a diferença desta saída com a anterior&quot; alt=&quot;Saída do comando com o caractere de escape para quebra de linha.&quot;&gt;&lt;&#x2F;img&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;numeros-inteiros&quot;&gt;Números inteiros&lt;&#x2F;h2&gt;
+&lt;p&gt;Você pode colocar um espaço entre &lt;strong&gt;%&lt;&#x2F;strong&gt; e &lt;strong&gt;d&lt;&#x2F;strong&gt; em &lt;strong&gt;%d&lt;&#x2F;strong&gt; para imprimir os números inteiros positivos com um espaço na frente. Isso ajuda na criação de uma coluna com a formatação mais homogênea, observe o exemplo feito das duas maneiras.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; printf &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;% d\n%d\n% d\n&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot; 10&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -10&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; 10
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;printf-output8.png&quot; title=&quot;Observe a diferença na formatação&quot; alt=&quot;Exemplos do comando utilizando espaço entre &#x27;%&#x27; e &#x27;d&#x27;&quot;&gt;&lt;&#x2F;img&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;numeros-decimais&quot;&gt;Números decimais&lt;&#x2F;h2&gt;
+&lt;p&gt;Quando se trata de números com ponto flutuante, devemos especificar a quantidade de casas existentes depois do ponto, caso contrário, o comando receberá por padrão o valor de seis casas decimais. O zero à esquerda pode ser omitido sem problema.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; printf &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Preço - R$%.2f\nLitro - %.3f ml\nTemperatura - %.1f ºC\nPadrão - %f\n&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot; 5.55 5.55 .55 0.55
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;img src=&#x2F;images&#x2F;printf-output7.png alt=&quot;comando com saída demonstrando a substituição de números com suas respectivas quantidades de casas decimais&quot;&gt;&lt;&#x2F;img&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Para operações matemáticas talvez você tenha que adicionar esta variavel de ambiente no seu bash para que seja impresso corretamente os pontos flutuantes L_C_NUMERIC=en_US.UTF-8&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;especificadores-de-conversao&quot;&gt;Especificadores de conversão&lt;&#x2F;h1&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th align=&quot;center&quot;&gt;Caractere(s)&lt;&#x2F;th&gt;&lt;th align=&quot;left&quot;&gt;Tipo&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;%d&lt;&#x2F;strong&gt;, &lt;strong&gt;%i&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;O argumento é convertido para um valor inteiro. Se houver alguma precisão especificada, a saída do comando deverá mostrar o valor na mesma quantidade de caracteres, caso tenha um zero na frente do valor numérico, a saída mostrará o valor preenchido com zeros à esquerda. A precisão padrão é 1.&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;%o&lt;&#x2F;strong&gt;, &lt;strong&gt;%u&lt;&#x2F;strong&gt;, &lt;strong&gt;%x&lt;&#x2F;strong&gt;, &lt;strong&gt;%X&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;Converte o argumento para o correspondente em octal &lt;strong&gt;(o)&lt;&#x2F;strong&gt;, decimal &lt;strong&gt;(u)&lt;&#x2F;strong&gt;, ou hexadecimal &lt;strong&gt;(x&lt;&#x2F;strong&gt; e &lt;strong&gt;X)&lt;&#x2F;strong&gt;.&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;%e&lt;&#x2F;strong&gt;, &lt;strong&gt;%E&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;Converte e arredonda o argumento para um valor &lt;strong&gt;double&lt;&#x2F;strong&gt; com o formato [-]d.ddde+dd. Uma conversão &lt;strong&gt;%E&lt;&#x2F;strong&gt; usa o &lt;strong&gt;E&lt;&#x2F;strong&gt; maiúsculo (ao invés do &lt;strong&gt;e&lt;&#x2F;strong&gt;) para introduzir um expoente. o expoente sempre contém no mínimo dois digitos; se o valor for zero, o expoente será 00.&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;%f&lt;&#x2F;strong&gt;, &lt;strong&gt;%F&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;O argumento &lt;strong&gt;double&lt;&#x2F;strong&gt; é arredondado e convertido para notação decimal no formato [-]ddd.ddd&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;%g&lt;&#x2F;strong&gt;, &lt;strong&gt;%G&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;O argumento &lt;strong&gt;double&lt;&#x2F;strong&gt; é convertido no estilo de &lt;strong&gt;f&lt;&#x2F;strong&gt; ou &lt;strong&gt;e&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;%a&lt;&#x2F;strong&gt;, &lt;strong&gt;%A&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;Converte o argumento &lt;strong&gt;double&lt;&#x2F;strong&gt; para notação hexadecimal usando letras no estilo [-]0xh.hhhhp&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;%c&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;Se não houver um modificador &lt;strong&gt;l&lt;&#x2F;strong&gt; presente, o argumento &lt;strong&gt;inteiro&lt;&#x2F;strong&gt; é convertido para um caracter&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;%s&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;Se não houver um modificador &lt;strong&gt;l&lt;&#x2F;strong&gt;, converte o argumento em um vetor de caracteres (string)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;%%&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;Um &#x27;&lt;strong&gt;%&lt;&#x2F;strong&gt;&#x27; é impresso. Nenhum argumento é convertido.&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;h1 id=&quot;caracteres-bandeira&quot;&gt;Caracteres Bandeira&lt;&#x2F;h1&gt;
+&lt;p&gt;O caractere &lt;strong&gt;%&lt;&#x2F;strong&gt; é seguido por zero ou mais das seguintes flags.&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th align=&quot;center&quot;&gt;Flag&lt;&#x2F;th&gt;&lt;th align=&quot;left&quot;&gt;Descrição&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;#&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;(números) O valor será convertido para que contenha a quantidade de caracteres definida neste número.&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;0&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;O valor será precedido por zeros ao invés de espaços em branco, se as flags &lt;strong&gt;0&lt;&#x2F;strong&gt; e &lt;strong&gt;-&lt;&#x2F;strong&gt; aparecerem juntas &lt;strong&gt;0&lt;&#x2F;strong&gt; será ignorado.&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;-&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;O valor convertido será alinhado à esquerda do campo delimitado (o padrão é alinhado à direita)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;&#x27; &#x27;&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;(um espaço) um espaço em branco deve ser deixado antes de um número positivo (ou uma string vazia)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;strong&gt;+&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;Um sinal (&lt;strong&gt;+&lt;&#x2F;strong&gt; ou &lt;strong&gt;-&lt;&#x2F;strong&gt;) deve ser sempre colocado antes de um número produzido por conversão de sinais. Por padrão um sinal é usado apenas para números negativos. Um &lt;strong&gt;+&lt;&#x2F;strong&gt; sobrescreve um espaço se ambos forem usados.&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;h2 id=&quot;alinhamento-a-direita&quot;&gt;Alinhamento à direita&lt;&#x2F;h2&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; printf &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Resolva a equação: |%15s + %15s = %s|\n&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;dezesseis&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;um&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;dezessete&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;
+
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;img src=&#x2F;images&#x2F;printf-output5.png alt=&quot;exemplo de uma string formatada para o alinhamento à direita&quot;&gt;&lt;&#x2F;img&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;alinhamento-a-esquerda&quot;&gt;Alinhamento à esquerda&lt;&#x2F;h2&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; printf &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Resolva a equação: |%-15s + %-15s = %s|\n&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;dezesseis&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;um&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;dezessete&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;img src=&#x2F;images&#x2F;printf-output6.png alt=&quot;exemplo de uma string formatada para o alinhamento à esquerda&quot;&gt;&lt;&#x2F;img&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Para mais informações sobre o comando &lt;em&gt;printf&lt;&#x2F;em&gt;, visite a documentação oficial em: &lt;a href=&quot;https:&#x2F;&#x2F;www.gnu.org&#x2F;software&#x2F;coreutils&#x2F;printf&quot;&gt;https:&#x2F;&#x2F;www.gnu.org&#x2F;software&#x2F;coreutils&#x2F;printf&lt;&#x2F;a&gt;&lt;br &#x2F;&gt;
+Você também pode digitar o seguinte comando diretamente do seu terminal:&lt;br &#x2F;&gt;
+&lt;code&gt;info &#x27;(coreutils) printf invocation&#x27;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Copiar e colar no terminal</title>
+		<published>2021-03-23T00:00:00+00:00</published>
+		<updated>2021-03-23T00:00:00+00:00</updated>
+		<link href="/post/copiar-e-colar-no-terminal/" type="text/html"/>
+		<id>/post/copiar-e-colar-no-terminal/</id>
+		<content type="html">&lt;p&gt;&lt;code&gt;CTRL&lt;&#x2F;code&gt;+&lt;code&gt;C&lt;&#x2F;code&gt; e &lt;code&gt;CTRL&lt;&#x2F;code&gt;+&lt;code&gt;V&lt;&#x2F;code&gt; são atalhos muito úteis no dia-a-dia. Acontece q se você é usuário da linha de comando, já deve ter percebido que o atalho &lt;code&gt;CTRL&lt;&#x2F;code&gt;+&lt;code&gt;C&lt;&#x2F;code&gt; está associado com a interrupção do processo em andamento.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;copiar-e-colar-com-alias&quot;&gt;&lt;strong&gt;Copiar e colar com alias&lt;&#x2F;strong&gt;.&lt;&#x2F;h3&gt;
+&lt;p&gt;Mas e se precisarmos copiar um documento inteiro, ou colar o conteúdo de algum arquivo diretamente em outro? Usar os atalhos do gnome seria cansativo e repetitivo, especialmente se precisarmos copiar e colar com certa frequência. Nessa horas um alias pode ajudar. E para criar um no bash é muito simples, basta adicionar uma linha dentro do arquivo &lt;em&gt;.bashrc&lt;&#x2F;em&gt; que fica localizado na pasta raiz do usuário &lt;em&gt;&#x2F;home&#x2F;{nome-do-usuario}&#x2F;&lt;&#x2F;em&gt; com a seguinte sintaxe:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;alias nome_do_alias=&amp;quot;comando-a-ser-executado&amp;quot;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;A declaração de um alias começa com a palavra chave reservada &lt;em&gt;alias&lt;&#x2F;em&gt; seguida do nome que você escolher para esse alias, o sinal de igual &lt;code&gt;=&lt;&#x2F;code&gt; e por fim o comando desejado escrito dentro de aspas. Cada alias precisa ser declarado em uma nova linha.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Atalho do terminal Gnome&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Para copiar o texto selecionado dentro do terminal você também pode utilizar o atalho &lt;code&gt;CTRL&lt;&#x2F;code&gt;+&lt;code&gt;SHIFT&lt;&#x2F;code&gt;+&lt;code&gt;C&lt;&#x2F;code&gt; e colar com &lt;code&gt;CTRL&lt;&#x2F;code&gt;+&lt;code&gt;SHIFT&lt;&#x2F;code&gt;+&lt;code&gt;V&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;copiar-e-colar-com-xclip&quot;&gt;&lt;strong&gt;Copiar e colar com xclip&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;A ferramenta &lt;em&gt;xclip&lt;&#x2F;em&gt; é fácil de usar se encaixa bem pra essa tarefa. Vamos criar um alias para copiar e outro para colar, e logo em seguida veremos uma explicação de como eles funcionam.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Copiar&lt;&#x2F;strong&gt;&lt;br &#x2F;&gt;
+&lt;code&gt;alias xcopy=&amp;quot;xclip -selection clipboard&amp;quot;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Colar&lt;&#x2F;strong&gt;&lt;br &#x2F;&gt;
+&lt;code&gt;alias xpaste=&amp;quot;xclip -selection clipboard -o&amp;quot;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;xclip&lt;&#x2F;em&gt; é o comando principal que vai copiar ou colar algum conteúdo pra gente. A opção &lt;em&gt;-selection&lt;&#x2F;em&gt; vai dizer pra ele &lt;strong&gt;onde&lt;&#x2F;strong&gt; vai ser realizada essa tarefa, que pode trabalhar com três opções: &lt;em&gt;primary&lt;&#x2F;em&gt;, &lt;em&gt;secondary&lt;&#x2F;em&gt;, e &lt;em&gt;clipboard&lt;&#x2F;em&gt;. O parametro clipboard diz ao &lt;em&gt;xclip&lt;&#x2F;em&gt; que queremos copiar para a &lt;strong&gt;área de transferência&lt;&#x2F;strong&gt; aquilo que for selecionado. E por fim a opção &lt;code&gt;-o&lt;&#x2F;code&gt; que quando adicionada, solicita ao programa que tudo que tiver sido selecionado deve ser redirecionado para a &lt;strong&gt;saída&lt;&#x2F;strong&gt; do programa (nesse caso, impresso na tela).&lt;&#x2F;p&gt;
+&lt;p&gt;Agora experimente copiar com:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;$ xcopy nome_do_arquivo&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;e colar com:&lt;br &#x2F;&gt;
+&lt;code&gt;$ xpaste&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Eles também aceitam redirecionamento!&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;$ man xclip | xcopy&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;$ xpaste &amp;gt; manual.txt&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Agora ficou mais fácil de editar documentos de texto. Para mais informações sobre o comando &lt;strong&gt;xclip&lt;&#x2F;strong&gt; visite a pagina da sua &lt;a href=&quot;&#x2F;post&#x2F;copiar-e-colar-no-terminal&#x2F;%7B%7Bpage.xclip-doc%7D%7D&quot;&gt;documentação&lt;&#x2F;a&gt; oficial.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>

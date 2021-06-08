@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>PinheiroCosta - Código Aberto - Relatos</title>
+	<subtitle>Blog pessoal que contém informações sobre programação, GNU&#x2F;Linux, desenvolvimento de software, e mais. Feito para quem gosta da linha de comando.</subtitle>
+	<link href="/categories/relatos/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="/"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2021-03-26T00:00:00+00:00</updated>
+	<id>/categories/relatos/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Rastrear mensagens de erro no Bash</title>
+		<published>2021-03-26T00:00:00+00:00</published>
+		<updated>2021-03-26T00:00:00+00:00</updated>
+		<link href="/post/rastrear-erro-no-terminal/" type="text/html"/>
+		<id>/post/rastrear-erro-no-terminal/</id>
+		<content type="html">&lt;p&gt;Estou na linha de comando quando me deparo com uma mensagem de erro. Mas infelizmente não existe referência para o arquivo de origem nesta mensagem. E o que encontrei na internet foram artigos bem genéricos sobre o problema, e agora? Neste artigo compartilho alguns comandos que utilizei pra resolver este impasse. Segue abaixo a mensagem:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;bash:&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; eval: linha 335: encontrado EOF inesperado enquanto procurava por `&amp;#39;&amp;#39; correspondente
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;bash:&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; eval: linha 336: erro de sintaxe: fim prematuro do arquivo
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Aqui observamos que o problema se encontra entre a linha 335 e 336 de algum arquivo. Trata-se de um erro de sintaxe, e o script em questão não foi executado até o fim como descrito acima.&lt;&#x2F;p&gt;
+&lt;p&gt;Mas para compreender melhor do que se trata, é necessário ficar atento no contexto. O que eu estava fazendo no momento que a mensagem surgiu? Bom. esta mensagem surge todas as vezes que eu abro o terminal. Isso significa que está relacionada com algum arquivo que é executado na inicialização do terminal? Vamos descobrir.&lt;&#x2F;p&gt;
+&lt;p&gt;O arquivo &lt;em&gt;.bashrc&lt;&#x2F;em&gt; é o responsável por executar as configurações que serão inicializadas com o terminal.Ele fica localizado na pasta &lt;em&gt;&#x2F;home&#x2F;usuário&#x2F;&lt;&#x2F;em&gt;. Porém no meu caso, este arquivo não chega a ter nem 300 linhas. E podemos observar isso com o seguinte comando:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; wc&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -l&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &#x2F;home&#x2F;usuario&#x2F;.bashrc
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;80&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; .bashrc
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Ocorre que este arquivo importa configurações de outros arquivos. com o comando &lt;em&gt;source&lt;&#x2F;em&gt;. Vamos descobrir que arquivos são estes.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; cat .bashrc | &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;grep &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;source&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;source &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;BASH_IT&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;&#x2F;bash_it.sh
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;source &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;ZZPATH&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Agora vamos verificar quantas linhas todos esses arquivos possuem juntos.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; wc&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -l&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; .bashrc .bash_it&#x2F;bash_it.sh &#x2F;usr&#x2F;local&#x2F;bin&#x2F;funcoeszz
+    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;80&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; .bashrc
+   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;159&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; .bash_it&#x2F;bash_it.sh
+ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;20551&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &#x2F;usr&#x2F;local&#x2F;bin&#x2F;funcoeszz
+ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;20790&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; total
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Mais de 20 mil linhas. Então é sim possível que a mensagem de erro esteja em algum lugar entre elas. Mas são muitas linhas, e agora? Será que existe alguma forma de rastrear o processo de execução desse arquivo? A resposta é sim. Existe uma forma de coletar os passos de execução de um script linha por linha com uma opção do bash:&lt;br &#x2F;&gt;
+&lt;code&gt;bash -x .nomedoscript.sh&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Quando executei esse comando aqui. me retornou um monte de linhas no prompt. Para facilitar a vida, é possível redirecionar essa saída para outro arquivo. Vamos fazer isso com:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;bash -x .bashrc 2&amp;gt; log&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Aqui nós redirecionamos as mensagens de erro para um novo arquivo chamado &lt;em&gt;log&lt;&#x2F;em&gt;. Agora é só buscarmos dentro desse arquivo aquilo que estiver em torno das linhas citadas lá no inicio. Vamos testar:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; cat&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -n&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; log | &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;head -338 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;| &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;tail -15 
+
+   324&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;	++++ cut&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -d&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -f&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; 2
+   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;325&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;	+++ extension=aliases
+   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;326&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;	+++ BASH_IT_LOG_PREFIX=&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;aliases: fuck: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;#39;
+   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;327&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;	+++ _log_debug &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Loading component...&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;#39;
+   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;328&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;	+++ about &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;log a debug message by echoing to the screen. needs BASH_IT_LOG_LEVEL &amp;gt;= BASH_IT_LOG_LEVEL_ALL&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;#39;
+   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;329&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;	+++ :
+   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;330&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;	+++ param &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;1: message to log&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;#39;
+   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;331&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;	+++ :
+   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;332&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;	+++ example &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;$ _log_debug &amp;quot;Loading plugin git...&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;#39;
+   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;333&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;	+++ :
+   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;334&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;	+++ group log
+   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;335&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;	+++ :
+   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;336&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;	+++ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[ &amp;#39;&amp;#39; -ge 3 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;]
+   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;337&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;	+++ return 0
+   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;338&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;	+++ source &#x2F;home&#x2F;romulo&#x2F;.bash_it&#x2F;enabled&#x2F;150---fuck.aliases.bash
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Cat&lt;&#x2F;strong&gt; com a opção &lt;strong&gt;-n&lt;&#x2F;strong&gt; enumera tudo que estiver em &lt;strong&gt;log&lt;&#x2F;strong&gt; linha por linha. E com um &lt;em&gt;pipe&lt;&#x2F;em&gt; &lt;code&gt;|&lt;&#x2F;code&gt; podemos redirecionar a saída do &lt;strong&gt;cat&lt;&#x2F;strong&gt; para o &lt;strong&gt;head&lt;&#x2F;strong&gt; que nos retorna apenas as primeiras linhas que estiverem seguidas do hífen &lt;code&gt;-338&lt;&#x2F;code&gt;. Com mais um &lt;strong&gt;pipe&lt;&#x2F;strong&gt; redirecionamos tudo que for retornado até agora para o &lt;strong&gt;tail&lt;&#x2F;strong&gt; que nos retorna apenas as últimas linhas também definidas com um hífen &lt;code&gt;-15&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;De acordo com esse trecho, dá pra ver que meu problema está relacionado com uma condição que faz uma avaliação numérica com uma string vazia &lt;code&gt;[[ &#x27;&#x27; -ge 3 ]]&lt;&#x2F;code&gt;. Também podemos observar que o trecho do código está relacionado com um plugin chamado &lt;em&gt;BASH_IT&lt;&#x2F;em&gt;. &lt;&#x2F;p&gt;
+&lt;p&gt;Depois de desinstalar o plugin meu terminal voltou ao normal. E aprendi que o bash já está cheio de recursos que nos ajudam a resolver nossos problemas no terminal. Basta dar uma olhada no manual do Bash. &lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Converter webm em gif</title>
+		<published>2020-12-11T00:00:00+00:00</published>
+		<updated>2020-12-11T00:00:00+00:00</updated>
+		<link href="/post/webm-em-gif/" type="text/html"/>
+		<id>/post/webm-em-gif/</id>
+		<content type="html">&lt;p&gt;Estava fazendo uns ajustes no blog, quando de repente o plugin da ferramenta do editor de códigos mostrou uma mensagem de erro na tela. Resolvi então fazer uma pausa e reportar o bug no repositório dos desenvolvedores do plugin. Conforme eu preenchia o formulário, percebi que demonstrar o problema com um gif ao invés de várias imagens seria mais eficiente.&lt;&#x2F;p&gt;
+&lt;p&gt;A maneira mais conveniente que me veio em mente foi fazer um screencast com a ferramenta nativa do gnome, que pode ser ativada através do atalho &lt;code&gt;Ctrl&lt;&#x2F;code&gt; + &lt;code&gt;Alt&lt;&#x2F;code&gt; + &lt;code&gt;Shift&lt;&#x2F;code&gt; + &lt;code&gt;R&lt;&#x2F;code&gt;. Um círculo vermelho&#x2F;laranja aparece no canto superior direito do monitor indicando que a tela está sendo gravada. Aí é só apertar &lt;code&gt;Ctrl&lt;&#x2F;code&gt; + &lt;code&gt;Alt&lt;&#x2F;code&gt; + &lt;code&gt;Shift&lt;&#x2F;code&gt; + &lt;code&gt;R&lt;&#x2F;code&gt; mais uma vez quando a gravação estiver concluída que a ferramenta joga a gravação no formato .webm direto na pasta &#x27;Vídeos&#x27; do nosso sistema. Legal!&lt;&#x2F;p&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;github.com&#x2F;PinheiroCosta&#x2F;PinheiroCosta.github.io&#x2F;raw&#x2F;master&#x2F;_images&#x2F;erro.gif&quot;&gt;  
+&lt;p&gt;Mas como infelizmente alguns sites não aceitam webm incorporados em suas páginas. Converter pra gif me pareceu ser uma boa opção. Para isso utilizei a ferramenta &lt;a href=&quot;https:&#x2F;&#x2F;ffmpeg.org&#x2F;&quot;&gt;FFmpeg&lt;&#x2F;a&gt;. Já tinha ouvido falar dessa ferramenta mas nunca a tinha usado antes. Ela é bastante versátil e me pareceu ser bem completa, capaz de realizar toda sorte de trabalhos com audio e vídeo. &lt;&#x2F;p&gt;
+&lt;p&gt;Depois de ler algumas instruções na página oficial e artigos que encontrei na internet, consegui elaborar um script pra fazer todo trabalho por nós. Você pode encontrar o script no meu reposiório, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;PinheiroCosta&#x2F;webmtogif&quot;&gt;clicando aqui&lt;&#x2F;a&gt;. E para usá-lo é simples, basta executar o arquivo &lt;em&gt;webmtogif&lt;&#x2F;em&gt; usando o nome do arquivo como parâmetro:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;$ bash webmtogif nomedoarquivo.webm&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;ou&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;$ bash webmtogif caminho&#x2F;do&#x2F;arquivo&#x2F;video.webm&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Para facilitar nossa vida, é possível tornar o arquivo executavel e chamá-lo diretamente&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;chmod&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; +x webmtogif
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;.&#x2F;webmtogif&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; arquivodevideo.webm
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;O arquivo gif será criado na pasta de onde o script foi executado.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Certifique-se de instalar a ferramenta ffmpeg antes de usar o script. Ela pode ser encontrada no &lt;a href=&quot;https:&#x2F;&#x2F;ffmpeg.org&#x2F;&quot;&gt;site oficial&lt;&#x2F;a&gt; ou instalada através do seu gerenciador de pacotes.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;E o plugin? Ah, depois de reportar o problema, o responsável da ferramenta me lembrou de que nem toda mensagem de erro na tela é um bug. O problema estava na minha máquina.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>

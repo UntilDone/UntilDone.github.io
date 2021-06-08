@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>PinheiroCosta - Código Aberto - Música</title>
+	<subtitle>Blog pessoal que contém informações sobre programação, GNU&#x2F;Linux, desenvolvimento de software, e mais. Feito para quem gosta da linha de comando.</subtitle>
+	<link href="/categories/musica/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="/"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2021-04-30T00:00:00+00:00</updated>
+	<id>/categories/musica/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Frequência Sonora</title>
+		<published>2021-04-30T00:00:00+00:00</published>
+		<updated>2021-04-30T00:00:00+00:00</updated>
+		<link href="/post/frequencia-sonora/" type="text/html"/>
+		<id>/post/frequencia-sonora/</id>
+		<content type="html">&lt;h1 id=&quot;introducao&quot;&gt;Introdução&lt;&#x2F;h1&gt;
+&lt;p&gt;Vamos usar como referência a escala de temperamento igual, onde a afinação tem como base o Lá na quarta oitava que vibra na frequência de 440 Hz &lt;code&gt;A4 = 440.00&lt;&#x2F;code&gt;. Isso significa que se tocarmos esse Lá no violão, a corda vibrará 440 vezes por segundo.&lt;&#x2F;p&gt;
+&lt;p&gt;Se multiplicarmos essa frequência por 2, vamos encontrar o &lt;code&gt;A5 = 880.00&lt;&#x2F;code&gt;. Que nada mais é que oito notas (uma oitava) acima desse lá. Na música é chamado de escala cromática as notas com seus respectivos intervalos de semitons entre elas.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;note que existe diferença entre escala maior e escala cromática&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Em uma escala cromática ascendente começando pelo dó, por exemplo, encontramos as seguintes notas:&lt;br &#x2F;&gt;
+&lt;code&gt;C - C# - D - D# - E - F - F# - G - G# - A - A# - B&lt;&#x2F;code&gt; &lt;em&gt;(Total de 12 semitons)&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Para encontrarmos a frequência do semiton acima do A4 podemos usar a fórmula:&lt;br &#x2F;&gt;
+&lt;strong&gt;A#4 = A4 * 2&lt;sup&gt;1&#x2F;12&lt;&#x2F;sup&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;A mesma lógica pode ser aplicada para encontrarmos semitons abaixo do A4:&lt;br &#x2F;&gt;
+&lt;strong&gt;F = A4 * 2&lt;sup&gt;-4&#x2F;12&lt;&#x2F;sup&gt;&lt;&#x2F;strong&gt; (onde F é 4 semitons abaixo de A4)&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;limites-da-audicao-humana&quot;&gt;Limites da audição humana&lt;&#x2F;h1&gt;
+&lt;p&gt;O ouvido humano é capaz de captar frequências de som entre 16 e 20.000 (hz). Como a nota mais baixa que conseguimos ouvir é o &lt;code&gt;C0 = 16(hz)&lt;&#x2F;code&gt;, podemos utilizá-lo na nossa fórmula para encontrar a tonalidade de uma determinada frequência. Uma tabela com as frequências sonoras pode ser encontrada em &lt;a href=&quot;https:&#x2F;&#x2F;pages.mtu.edu&#x2F;%7Esuits&#x2F;notefreqs.html&quot;&gt;https:&#x2F;&#x2F;pages.mtu.edu&#x2F;~suits&#x2F;notefreqs.html&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;matematica&quot;&gt;Matemática&lt;&#x2F;h1&gt;
+&lt;p&gt;Para uma tonalidade T, o número de semitons de C0 até T é:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;S = 12 log&lt;sub&gt;2&lt;&#x2F;sub&gt;(T &#x2F; C0)&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;algoritmo&quot;&gt;Algoritmo&lt;&#x2F;h1&gt;
+&lt;p&gt;Trecho de um código em python que calcula o número de semitons de C0 até uma frequência, e então computa a tonalidade correspondente:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;math &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;log2, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;pow
+
+
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;A4 = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;440
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;C0 = A4*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;pow&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;, -&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;4&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;9&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;12&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;)
+sigla = [&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;C&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;C#&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;D&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;D#&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;E&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;F&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;F#&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;G&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;G#&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;A&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;A#&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;B&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;]
+
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;tom&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;frequencia&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;):
+    semitom = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;round&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;12&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;log2&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(frequencia&#x2F;C0))
+    oitava = semitom &#x2F;&#x2F; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;12
+    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;nota = semitom % &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;12
+    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;return f&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;{sigla[nota]}{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;str&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(oitava)}&amp;quot;
+
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Na linguagem C:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code class=&quot;language-C&quot; data-lang=&quot;C&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;#include &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;math.h&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;#include &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;stdio.h&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;#include &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;stdlib.h&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;gt;
+
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;tom&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;double &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;frequencia&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;)
+{
+	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;double&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; A4 = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;440&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;;
+	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;double&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; C0 = A4 * &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;pow&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;, -&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;4.75&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;);
+	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;char&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;* sigla[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;12&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;] = {&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;C&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;C#&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;D&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;D#&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;E&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;F&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;F#&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;G&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;G#&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;A&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;A#&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;B&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;};
+
+	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;double&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; semitons = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;round&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;12&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;log2&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(frequencia&#x2F;C0));
+	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; oitava = semitons &#x2F; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;12&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;;
+	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; nota = (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;) semitons % &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;12&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;;
+
+	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;printf&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;%s%d&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\n&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, sigla[nota], oitava);
+
+	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;;
+}
+
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;O tom A4 possui sua propria variável para caso você precise modificar o código para uma afinação diferente.&lt;&#x2F;p&gt;
+&lt;p&gt;Crédito do trecho em python: &lt;a href=&quot;https:&#x2F;&#x2F;www.johndcook.com&#x2F;blog&#x2F;2016&#x2F;02&#x2F;10&#x2F;musical-pitch-notation&#x2F;&quot;&gt;https:&#x2F;&#x2F;www.johndcook.com&#x2F;blog&#x2F;2016&#x2F;02&#x2F;10&#x2F;musical-pitch-notation&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>
